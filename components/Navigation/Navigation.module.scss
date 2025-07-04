@@ -2,22 +2,139 @@
 @use "@/styles/mixins.scss" as m;
 
 .navigation {
-  @include m.flex;
+  @include m.flex(row, center, space-between);
   @include m.container;
+  position: relative;
+  height: 80px;
+  z-index: 10;
+  padding: 1rem 0;
+  .logoLink {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
   .menu {
+    top: 100%;
     @include m.flex;
-    gap: 20px;
 
     ul {
-      @include m.flex;
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 50%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-      li a {
-        color: var(--light-color);
+    @include m.respond-max(990px)  {
+      position: absolute;
+      justify-content: flex-start;
+      left: 0;
+      top: 80px;
+      bottom: 0;
+      background: var(--background-color);
+      height: 100vh;
+      padding: v.$space-md;
+      z-index: 10;
+      width: 100%;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      pointer-events: none;
+      flex-direction: column;
 
-        &:hover {
-            color: var(--primary-color);
+      &.open {
+        max-height: 100vh;
+
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .navigationLinks {
+    @include m.btn;
+    @include m.flex;
+    padding: 1.5rem;
+    margin: 0;
+    padding: 0 0.5rem;
+
+    @include m.respond-max(990px) {
+      width: 100%;
+    }
+
+    a {
+      color: var(--light-color);
+      width: 100%;
+
+      @include m.respond-max(990px)  {
+        padding: 10px;
+      }
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .navbarToggler {
+    display: none;
+
+    @include m.respond-max(990px) {
+      display: block;
+      cursor: pointer;
+      background: none;
+      border: none;
+      z-index: 20;
+      position: absolute;
+      right: 20px;
+
+      .hamburgerIcon {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        display: block;
+        position: relative;
+        transition: var(--transition);
+        border-bottom: 2px solid var(--light-color);
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 2px;
+          background-color: var(--light-color);
+          transition: var(--transition);
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          top: 50%;
+          left: 0;
+          transform: translete(-50%, -50%);
+        }
+
+        &.open {
+          background-color: transparent;
+          border-bottom: transparent;
+          transition: var(--transition);
+
+          &::before {
+            transform: rotate(45deg);
+            top: 50%;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            top: 50%;
+          }
         }
       }
     }

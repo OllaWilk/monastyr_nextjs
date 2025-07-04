@@ -55,6 +55,7 @@ h4 {
 a {
   text-decoration: none;
   transition: var(--transition);
+  margin: 0;
 
   &:hover {
     color: inherit;

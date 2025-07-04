@@ -1,0 +1,115 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+
+%btn-base {
+@include m.btn;
+}
+
+.btn-primary {
+  @extend %btn-base;
+  background: var(--primary-color);
+  color: var(--black-color);
+
+  &:hover {
+    background: var(--gold-color-light);
+    border: 2px solid transparent;
+    color: var(--black-color);
+  }
+  &:focus {
+    outline: 2px solid var(--gold-color-light);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    background: var(--light-grey-color);
+    color: var(--black-color);
+    cursor: not-allowed;
+    border: 2px solid var(--light-grey-color);
+  }
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  background: transparent;
+  border-color: var(--primary-color);;
+  color: var(--primary-color);;
+
+  &:hover {
+    background: transparent;
+    color: var(--gold-color-light);
+    border: 2px solid var(--gold-color-light);
+  }
+  &:focus {
+    outline: 2px solid var(--gold-color);;
+    outline-offset: 2px;
+  }
+  &:disabled {
+    border-color: var(--light-grey-color);
+    color: var(--light-grey-color);
+  }
+}
+
+.btn-tertiary {
+  @extend %btn-base;
+  background: transparent;
+  color: var(--light-color);;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--gold-color);;
+  }
+  &:focus {
+    outline: 2px solid var(--gold-color);;
+    outline-offset: 2px;
+  }
+  &:disabled {
+    color: var(--light-grey-color);
+    text-decoration: none;
+  }
+}
+
+.btn-outline {
+  @extend %btn-base;
+  background: transparent;
+  color: var(--primary-color);;
+
+  &:hover {
+    background: var(--primary-color);;
+    color: var(--black-color);
+  }
+  &:focus {
+    outline: 2px solid var(--gold-color);;
+    outline-offset: 2px;
+  }
+  &:disabled {
+    background: var(--light-grey-color);
+    color: var(--black-color);
+    cursor: not-allowed;
+    border: 2px solid var(--light-grey-color);
+  }
+}
+
+.btn-underline {
+  @extend %btn-base;
+  background: transparent;
+  color: var(--primary-color);;
+  border-bottom: 1px solid var(--primary-color);;
+  border-radius: 0;
+
+  &:hover {
+    color: var(--gold-color-light);
+  }
+  &:focus {
+    outline: 2px solid var(--gold-color-light);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    color: var(--light-grey-color);
+    text-decoration: none;
+    border: none;
+  }
+}
