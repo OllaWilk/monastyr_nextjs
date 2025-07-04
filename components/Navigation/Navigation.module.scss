@@ -1,0 +1,25 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.navigation {
+  @include m.flex;
+  @include m.container;
+
+  .menu {
+    @include m.flex;
+    gap: 20px;
+
+    ul {
+      @include m.flex;
+      gap: 20px;
+
+      li a {
+        color: var(--light-color);
+
+        &:hover {
+            color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

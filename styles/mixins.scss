@@ -1,0 +1,107 @@
+@use "./variables.scss" as v;
+
+/* ---------------------------------- */
+/* CONTAINER                          */
+/* ---------------------------------- */
+
+@mixin container {
+  width: 75%;
+  max-width: 1280px;
+  transition: var(--transition);
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+/* ---------------------------------- */
+/* FLEXBOX                            */
+/* ---------------------------------- */
+
+@mixin flex($direction: row, $align: center, $justify: space-between) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+/* ---------------------------------- */
+/* BUTTON                             */
+/* ---------------------------------- */
+
+@mixin btn {
+  font-family: var(--font-body);
+  font-size: v.$font-size-small;
+  padding: calc(0.5 * 1.5) 2rem;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* ---------------------------------- */
+/* UTILS                              */
+/* ---------------------------------- */
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Mixin: from a specific width
+@mixin respond-min($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Mixin: to a specific width
+@mixin respond-max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+/* ---------------------------------- */
+/* MEDIA QUERIES - desktop first     */
+/* ---------------------------------- */
+
+@mixin r-mobile {
+  @include respond-max(v.$breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin r-tablet {
+  @include respond-max(v.$breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin r-small-laptop {
+  @include respond-max(v.$breakpoint-small-laptop) {
+    @content;
+  }
+}
+
+@mixin r-laptop {
+  @include respond-max(v.$breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin r-desktop {
+  @include respond-max(v.$breakpoint-desktop) {
+    @content;
+  }
+}
