@@ -19,7 +19,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+### 📝 Commit Conventions
 
+This project uses semantic commit message prefixes inspired by [Conventional Commits](https://www.conventionalcommits.org/). Below are some common examples:
+
+| Prefix     | When to use                             | Example commit message                             |
+|------------|------------------------------------------|-----------------------------------------------------|
+| `fix`      | Fixing a bug or UI issue                 | `fix: align and resize hamburger menu`              |
+| `style`    | Visual changes without logic changes     | `style: update hamburger spacing and alignment`     |
+| `refactor` | Code cleanup without changing behaviour  | `refactor: simplify hamburger layout styles`        |
+| `chore`    | Minor updates not related to features    | `chore: tidy up navigation padding`                 |
+
+> These conventions help keep the commit history clear and consistent.
 
 
 ```
