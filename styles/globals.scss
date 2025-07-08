@@ -27,6 +27,11 @@ body {
   overflow: hidden;
 }
 
+section {
+  background-color: var(--background-color);
+  padding: 60px;
+}
+
 h1,
 h2,
 h3,
@@ -57,6 +62,7 @@ a {
   text-decoration: none;
   transition: var(--transition);
   margin: 0;
+  color: var(--black-color);
 
   &:hover {
     color: inherit;

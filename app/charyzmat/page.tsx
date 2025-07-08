@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Charyzmat() {
   return (
-    <div>
+    <div className="container">
 
     <Image
       src="/under construction.png"

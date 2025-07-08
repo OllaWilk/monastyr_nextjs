@@ -8,6 +8,7 @@ export default function Duchowosc() {
       width={350}
       height={500}
       priority
+      className="container"
     />
   );
 }

@@ -1,0 +1,66 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.splash {
+  height: calc(90vh - 80px); // Adjusting for the height of the navbar;
+  position: relative;
+  overflow: hidden;
+  @include m.flex;
+
+  @include m.r-tablet {
+    text-align: center;
+  }
+
+  .inner {
+    @include m.container;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+    @include m.r-tablet {
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0 20px;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    @include m.r-mobile {
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0 20px;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    @include m.respond-max(355px) {
+      padding: 10px;
+      margin: 0;
+    }
+
+    .cta {
+      font-size: 1rem;
+      color: var(--grey-color);
+      margin: 1rem 0 2rem 0;
+      line-height: 150%;
+      width: 100%;
+
+      .lineSeparator {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 2px;
+        background-color: #999;
+        margin: 0 8px;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .ctaButton {
+      width: 40%;
+
+      @include m.r-tablet {
+        width: 100%;
+      }
+    }
+  }
+}

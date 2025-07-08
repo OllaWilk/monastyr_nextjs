@@ -1,16 +1,11 @@
-import Image from "next/image";
+import { Header } from "@/components/Header/Header";
 
 const Home = () => {
   return (
     <div>
-      <main>
-        <Image
-          src="/under construction.png"
-          alt="strona w budowie"
-          width={350}
-          height={500}
-          priority
-        />
+      <Header />
+      <main className="container" >
+       <h2 >przepraszamy strona w budowie</h2>
       </main>
     </div>
   );

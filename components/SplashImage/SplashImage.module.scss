@@ -1,0 +1,29 @@
+@use "@/styles/mixins.scss" as m;
+
+.splashImage {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -99;
+  overflow: hidden;
+  opacity: 0.8;
+
+  @include m.r-small-laptop {
+    width: 120%;
+    right: -10%;
+    opacity: 0.8;
+  }
+  @include m.r-tablet {
+    width: 200%;
+    height: 100%;
+    opacity: 0.6;
+  }
+
+  .imgage-desctop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}

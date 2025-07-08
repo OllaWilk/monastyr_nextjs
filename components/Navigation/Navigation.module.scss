@@ -5,9 +5,11 @@
   display: flex;
   @include m.container;
   position: relative;
-  height: 80px;
+  min-height: 80px;
   z-index: 10;
   padding: 1rem 0;
+  gap: 20px;
+
 
   @include m.r-mobile {
     width: 100%;
