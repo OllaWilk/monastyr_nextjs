@@ -24,6 +24,7 @@ body {
   @include m.container;
   @include m.flex(column, center, center);
   gap: 20px;
+  overflow: hidden;
 }
 
 h1,

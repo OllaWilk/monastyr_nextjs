@@ -1,9 +1,8 @@
 @use "@/styles/variables.scss" as v;
 @use "@/styles/mixins.scss" as m;
 
-
 %btn-base {
-@include m.btn;
+  @include m.btn;
 }
 
 .btn-primary {
@@ -35,8 +34,8 @@
 .btn-secondary {
   @extend %btn-base;
   background: transparent;
-  border-color: var(--primary-color);;
-  color: var(--primary-color);;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 
   &:hover {
     background: transparent;
@@ -44,7 +43,7 @@
     border: 2px solid var(--gold-color-light);
   }
   &:focus {
-    outline: 2px solid var(--gold-color);;
+    outline: 2px solid var(--gold-color);
     outline-offset: 2px;
   }
   &:disabled {
@@ -56,14 +55,14 @@
 .btn-tertiary {
   @extend %btn-base;
   background: transparent;
-  color: var(--light-color);;
+  color: var(--light-color);
   text-decoration: underline;
 
   &:hover {
-    color: var(--gold-color);;
+    color: var(--gold-color);
   }
   &:focus {
-    outline: 2px solid var(--gold-color);;
+    outline: 2px solid var(--gold-color);
     outline-offset: 2px;
   }
   &:disabled {
@@ -75,14 +74,14 @@
 .btn-outline {
   @extend %btn-base;
   background: transparent;
-  color: var(--primary-color);;
+  color: var(--primary-color);
 
   &:hover {
-    background: var(--primary-color);;
+    background: var(--primary-color);
     color: var(--black-color);
   }
   &:focus {
-    outline: 2px solid var(--gold-color);;
+    outline: 2px solid var(--gold-color);
     outline-offset: 2px;
   }
   &:disabled {
@@ -96,8 +95,8 @@
 .btn-underline {
   @extend %btn-base;
   background: transparent;
-  color: var(--primary-color);;
-  border-bottom: 1px solid var(--primary-color);;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
   border-radius: 0;
 
   &:hover {
