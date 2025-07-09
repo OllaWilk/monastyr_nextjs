@@ -1,0 +1,53 @@
+@use "@/styles/mixins.scss" as m;
+@use "@/styles/variables.scss" as v;
+
+.quote {
+  background-color: var(--background-color);
+  padding: 112px 0;
+  position: relative;
+  overflow: hidden;
+
+  @include m.r-tablet {
+    padding: 20px 0;
+  }
+
+  .about {
+    @include m.flex(row, center, flex-start);
+    gap: 30px;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 0 0 20px 0;
+
+    @include m.r-tablet {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    img,
+    h2 {
+      margin: 0;
+    }
+
+    h2 {
+      width: 52%;
+
+      @include m.r-tablet {
+        text-align: center;
+      }
+
+      @include m.r-small-laptop {
+        width: 100%;
+      }
+    }
+  }
+
+  .text {
+    line-height: 150%;
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1rem;
+
+    @include m.r-small-laptop {
+      text-align: center;
+    }
+  }
+}

@@ -13,7 +13,7 @@
 
 body {
   font-family: var(--font-body);
-  font-size: var(--font-size);
+  font-size: v.$font-size-body;
   line-height: v.$line-height-base;
   background-color: var(--background-color);
   color: var(--light-color);
@@ -22,8 +22,6 @@ body {
 
 .container {
   @include m.container;
-  @include m.flex(column, center, center);
-  gap: 20px;
   overflow: hidden;
 }
 
@@ -32,31 +30,7 @@ section {
   padding: 60px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-head);
-  color: var(--gold-color-light);
-}
 
-h1 {
-  font-size: v.$font-size-h1;
-}
-
-h2 {
-  font-size: v.$font-size-h2;
-}
-
-h3 {
-  font-size: v.$font-size-h3;
-}
-
-h4 {
-  font-size: v.$font-size-h4;
-}
 
 a {
   text-decoration: none;

@@ -1,13 +1,13 @@
-import styles from "./Header.module.scss";
-import { SplashImage } from "../SplashImage/SplashImage";
 import Link from "next/link";
-import { MainTitle } from "../MainTitle/MainTitle";
+import { SplashImage } from "../SplashImage/SplashImage";
+import { Titles } from "../Titles/Titles";
 import { Button } from "../Buttons/Button";
+import styles from "./Header.module.scss";
 
 export const Header = () => (
   <header className={styles.splash}>
     <div className={styles.inner}>
-      <MainTitle
+      <Titles
         title={`
         Monastyr <br />
         Świętego <br />

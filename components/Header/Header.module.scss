@@ -2,40 +2,47 @@
 @use "@/styles/mixins.scss" as m;
 
 .splash {
-  height: calc(90vh - 80px); // Adjusting for the height of the navbar;
+  height: calc(90svh - 80px); // Adjusting for the height of the navbar;
   position: relative;
   overflow: hidden;
   @include m.flex;
 
   @include m.r-tablet {
     text-align: center;
+    height: auto;
   }
 
   .inner {
     @include m.container;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
+    h1 {
+      text-align: left;
+    }
+
     @include m.r-tablet {
       background-color: rgba(0, 0, 0, 0.5);
-      margin: 0 20px;
-      padding: 2rem;
-      border-radius: 1rem;
+      padding: 3rem 2rem;
+    
+
+      h1 {
+        text-align: center;
+      }
     }
 
     @include m.r-mobile {
       background-color: rgba(0, 0, 0, 0.5);
-      margin: 0 20px;
       padding: 2rem;
-      border-radius: 1rem;
+   
     }
 
     @include m.respond-max(355px) {
-      padding: 10px;
+      padding: 20px;
       margin: 0;
     }
 
     .cta {
-      font-size: 1rem;
+      font-size: v.$font-size-body;
       color: var(--grey-color);
       margin: 1rem 0 2rem 0;
       line-height: 150%;
@@ -58,7 +65,7 @@
     .ctaButton {
       width: 40%;
 
-      @include m.r-tablet {
+      @include m.r-mobile{
         width: 100%;
       }
     }

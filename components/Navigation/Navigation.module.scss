@@ -10,7 +10,6 @@
   padding: 1rem 0;
   gap: 20px;
 
-
   @include m.r-mobile {
     width: 100%;
   }
@@ -19,6 +18,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: 999;
   }
 
   .menu {
@@ -41,7 +41,6 @@
       left: 0;
       top: 80px;
       bottom: 0;
-      background: var(--background-color);
       height: 100vh;
       padding: v.$space-md;
       z-index: 10;
@@ -55,9 +54,11 @@
 
       &.open {
         max-height: 100vh;
-
+        background: var(--background-color);
         opacity: 1;
         pointer-events: auto;
+        top: 0;
+        padding-top: 80px;
       }
     }
   }
@@ -151,10 +152,10 @@
     }
 
     @include m.r-mobile {
-      right: 10px;
+      right: 20px;
     }
 
-    @include m.respond-min(v.$breakpoint-mobile){
+    @include m.respond-min(v.$breakpoint-mobile) {
       right: 20px;
     }
   }

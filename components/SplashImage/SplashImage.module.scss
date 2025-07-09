@@ -9,14 +9,16 @@
   overflow: hidden;
   opacity: 0.8;
 
+
+
   @include m.r-small-laptop {
     width: 120%;
+    
     right: -10%;
     opacity: 0.8;
   }
   @include m.r-tablet {
     width: 200%;
-    height: 100%;
     opacity: 0.6;
   }
 
