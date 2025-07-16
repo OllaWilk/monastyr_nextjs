@@ -10,7 +10,11 @@
   @include m.r-tablet {
     text-align: center;
     height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 50vh;
   }
+
+
 
   .inner {
     @include m.container;
@@ -21,9 +25,7 @@
     }
 
     @include m.r-tablet {
-      background-color: rgba(0, 0, 0, 0.5);
       padding: 3rem 2rem;
-    
 
       h1 {
         text-align: center;
@@ -31,9 +33,7 @@
     }
 
     @include m.r-mobile {
-      background-color: rgba(0, 0, 0, 0.5);
       padding: 2rem;
-   
     }
 
     @include m.respond-max(355px) {
@@ -65,7 +65,7 @@
     .ctaButton {
       width: 40%;
 
-      @include m.r-mobile{
+      @include m.r-mobile {
         width: 100%;
       }
     }

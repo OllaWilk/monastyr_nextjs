@@ -8,18 +8,19 @@
   overflow: hidden;
 
   @include m.r-tablet {
-    padding: 20px 0;
+    padding: 50px 0;
   }
 
   .about {
     @include m.flex(row, center, flex-start);
     gap: 30px;
     border-bottom: 1px solid var(--primary-color);
-    padding: 0 0 20px 0;
+    padding: 0 0 50px 0;
 
     @include m.r-tablet {
       flex-direction: column;
-      gap: 10px;
+      gap: 30px;
+      padding: 0 0 50px 0;
     }
 
     img,
@@ -32,6 +33,7 @@
 
       @include m.r-tablet {
         text-align: center;
+        max-width: 300px;
       }
 
       @include m.r-small-laptop {
@@ -41,13 +43,20 @@
   }
 
   .text {
-    line-height: 150%;
     text-align: right;
     margin-top: 30px;
     font-size: 1rem;
+          line-height: 1.7;
+
 
     @include m.r-small-laptop {
       text-align: center;
+    }
+
+    @include m.r-tablet {
+      @include m.flex(column, center, center);
+      gap: 10px;
+      max-width: 250px;
     }
   }
 }
