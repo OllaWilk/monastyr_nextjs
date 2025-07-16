@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header/Header";
 import {Quotes} from "@/components/Quotes/Quotes";
+import { Topics } from "@/components/Topics/Topics";
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       <Header />
       <main >
         <Quotes />
-       <h2 className="container" >przepraszamy strona w budowie</h2>
+        <Topics />
       </main>
     </div>
   );

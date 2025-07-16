@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { headerData } from "@/data/homepage/header";
 import { SplashImage } from "../SplashImage/SplashImage";
 import { Titles } from "../Titles/Titles";
 import { Button } from "../Buttons/Button";
@@ -7,20 +8,14 @@ import styles from "./Header.module.scss";
 export const Header = () => (
   <header className={styles.splash}>
     <div className={styles.inner}>
-      <Titles
-        title={`
-        Monastyr <br />
-        Świętego <br />
-        Krzysztofa`}
-      />
+      <Titles title={headerData.title} />
       <p className={styles.cta}>
-        Chcesz nas lepiej poznać? <span className={styles.lineSeparator}></span>
+        {headerData.ctaText} <span className={styles.lineSeparator}></span>
       </p>
       <Button className={styles.ctaButton}>
-        <Link href="/onas" >przeczytaj o nas</Link>
+        <Link href={headerData.buttonLink}>{headerData.buttonLabel}</Link>
       </Button>
     </div>
-
-    <SplashImage src={"/splash.jpg"} alt={"święty Krzysztof"} />
+    <SplashImage src={headerData.image.src} alt={headerData.image.alt} />
   </header>
 );
