@@ -20,3 +20,10 @@ export interface QuoteData {
   verseLines: string[];
   verseReference: string;
 }
+
+export interface TopicCard {
+  title: string;
+  description: string;
+  href: string;
+  img?: imageType;
+}

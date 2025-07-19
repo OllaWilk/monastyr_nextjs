@@ -3,7 +3,7 @@
 
 .quote {
   background-color: var(--background-color);
-  padding: 112px 0;
+  padding: 112px 0 72px 0;
   position: relative;
   overflow: hidden;
 
@@ -29,7 +29,7 @@
     }
 
     h2 {
-      width: 52%;
+      width: 60%;
 
       @include m.r-tablet {
         text-align: center;

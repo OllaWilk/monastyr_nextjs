@@ -6,7 +6,7 @@ export const quoteData: QuoteData = {
     height: 112,
     link: false,
   },
-  title: `Jesteśmy wspólnotą ekumeniczną, wpatrującą się w Jezusa Miłosiernego, </br> służącą wszystkim, </br> a zwłaszcza tym, </br> co są na peryferiach.`,
+  title: `Jesteśmy wspólnotą ekumeniczną, wpatrującą się w Jezusa Miłosiernego,  służącą wszystkim, </br> a zwłaszcza tym, co są na peryferiach.`,
   verseLines: [
     "Zawsze się radujcie. Nieustannie się módlcie,",
     "za wszystko dziękujcie, gdyż taka jest wola",

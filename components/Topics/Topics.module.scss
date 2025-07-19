@@ -2,5 +2,106 @@
 @use "@/styles/variables.scss" as v;
 
 .topics {
-    background-color: var(--background-color);
+  padding-bottom: 80px;
+
+  .wraper {
+    @include m.container;
+    h2 {
+        padding: 0 0 20px ;
+    }
+  }
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "card1 card2 card2"
+    "card1 card3 card4";
+
+  .card--1 {
+    grid-area: card1;
+    @include m.flex(column, center, space-between);
+
+    div {
+      height: 280px;
+
+      @include m.r-tablet {
+        height: 200px;
+      }
+    }
+  }
+
+  .card--2 {
+    grid-area: card2;
+    @include m.flex(column, flex-start, flex-start);
+
+    div {
+      height: 80px;
+      order: 0;
+
+      @include m.r-tablet {
+        height: 200px;
+        order: 0;
+      }
+    }
+  }
+
+  .card--3 {
+    grid-area: card3;
+    @include m.flex(column, flex-start, space-between);
+  }
+
+  .card--4 {
+    grid-area: card4;
+    @include m.flex(column, flex-start, space-between);
+
+
+  }
+
+  @include m.r-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.gridBottom {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 20px;
+
+  @include m.r-tablet {
+    @include m.flex(column, stretch, center);
+  }
+
+  .card--5 {
+    @include m.flex(column, flex-start, space-between);
+
+    div {
+      height: 80px;
+      order: 0;
+
+      @include m.r-tablet {
+        height: 200px;
+        order: 0;
+      }
+    }
+  }
+
+  .card--6 {
+    @include m.flex(column, flex-start, space-between);
+
+    div {
+      height: 80px;
+      order: 0;
+
+      @include m.r-tablet {
+        height: 200px;
+        order: 0;
+      }
+    }
+  }
 }
