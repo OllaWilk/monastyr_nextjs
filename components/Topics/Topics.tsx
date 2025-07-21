@@ -1,6 +1,5 @@
 import {
-  topicsSectionOne,
-  topicsSectionTwo,
+
   topicsData,
 } from "@/data/homepage/topics";
 import { TopicCard } from "../TopicCard/TopicCard";
