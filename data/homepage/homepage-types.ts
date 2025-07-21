@@ -2,6 +2,7 @@ export interface imageType {
   src: string;
   alt: string;
 }
+
 export interface HeaderData {
   title: string;
   ctaText: string;

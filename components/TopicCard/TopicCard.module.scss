@@ -5,10 +5,8 @@
   border: 1px solid var(--primary-color);
   border-radius: var(--border-radius);
   padding: 2rem;
-  position: relative;
   background-color: var(--dark-color);
   color: inherit;
-  gap: 2rem;
   transition: background 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden;
@@ -27,6 +25,17 @@
     padding: 2rem;
     gap: 1.3rem;
   }
+
+  .column {
+    @include m.flex(column, center, space-between);
+    gap: 1.5rem;
+  }
+
+  .row {
+    @include m.flex(row, center, space-between);
+    gap: 2rem;
+    height: 100%;
+  }
 }
 
 .description {
@@ -38,18 +47,14 @@
 .image {
   position: relative;
   width: 100%;
-  box-shadow: 0 0 10px rgb(0, 0, 0.5);
-  border-radius: var(--border-radius);
+  height: 200px;
   overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
-    object-fit: cover;
-    object-position: 50% 35%; 
-
-    ;
+    object-fit: contain;
   }
 }
 
@@ -60,8 +65,7 @@
   width: 100%;
   text-transform: uppercase;
 
-   @include m.r-tablet {
-     text-align: center;
+  @include m.r-tablet {
+    text-align: center;
   }
 }
-
