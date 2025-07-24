@@ -2,70 +2,121 @@
 @use "@/styles/variables.scss" as v;
 
 .card {
-  border: 1px solid var(--primary-color);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  background-color: var(--dark-color);
-  color: inherit;
-  transition: background 0.3s ease-in-out;
-  cursor: pointer;
+  position: relative;
+  background: #131210;
+  border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  height: 220px;
+  @include m.flex(column, center, center);
 
   &:hover {
-    background-color: var(--primary-color);
-    color: var(--black-color);
+    transform: scale(1.02);
+
+    .content {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
-  @include m.r-small-laptop {
-    padding: 1.3rem;
-    gap: 2rem;
-  }
+  @include m.r-mobile {
+    height: auto;
+    box-shadow: none;
+    overflow: visible;
+    transform: none;
+    border: 1px solid var(--gold-color-light);
 
-  @include m.r-tablet {
-    padding: 2rem;
-    gap: 1.3rem;
-  }
+    &:hover .content {
+      transform: none;
+      opacity: 1;
+    }
 
-  .column {
-    @include m.flex(column, center, space-between);
-    gap: 1.5rem;
+    &:hover .title {
+      color: var(--light-color);
+    }
   }
-
-  .row {
-    @include m.flex(row, center, space-between);
-    gap: 2rem;
-    height: 100%;
-  }
-}
-
-.description {
-  font-size: v.$font-size-small;
-  font-weight: 100;
-  width: 100%;
 }
 
 .image {
   position: relative;
   width: 100%;
-  height: 200px;
-  overflow: hidden;
+  height: 100%;
+
+  @include m.r-mobile {
+    height: 250px;
+  }
 
   img {
+    object-fit: cover;
+    object-position: 20% 20%;
     width: 100%;
     height: 100%;
-    border-radius: var(--border-radius);
-    object-fit: contain;
+    transition: scale 0.4s ease;
+  }
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1.2rem;
+  color: var(--light-color);
+  transform: translateY(100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+
+  @include m.r-mobile {
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: none;
+    padding: 1.2rem 1.5rem 2rem 1.5rem;
+    height: auto;
+  }
+}
+
+.description {
+  color: var(--light-color);
+  font-size: v.$font-size-small;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.6;
+
+  @include m.r-mobile {
+    font-size: 0.9rem;
+    text-align: center;
   }
 }
 
 .title {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--light-color);
+  padding: 1rem 1.6rem 1.2rem 1.5rem;
+  text-align: center;
+  z-index: 9;
   font-size: v.$font-size-body;
   font-weight: lighter;
   text-align: left;
   width: 100%;
   text-transform: uppercase;
+  text-align: right;
+  transition: var(--transition);
 
-  @include m.r-tablet {
-    text-align: center;
+  @include m.r-mobile {
+    background: none;
+    position: relative;
+    bottom: auto;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    text-align: left;
+    width: auto;
   }
+}
+
+.card:hover .title {
+  color: var(--primary-color);
 }

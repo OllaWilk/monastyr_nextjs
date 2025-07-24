@@ -5,6 +5,7 @@
   font-family: var(--font-head);
   color: var(--gold-color-light);
   text-align: left;
+  text-wrap: balance;
 
   &--h1 {
     text-transform: uppercase;
@@ -14,9 +15,10 @@
     font-weight: bold;
     margin-bottom: 20px;
     overflow-wrap: break-word;
+    text-wrap: balance;
 
     @include m.r-tablet {
-      font-size: v.$font-size-h2;
+      font-size: 2.8rem;
       margin-bottom: 16px;
     }
   }
@@ -24,6 +26,8 @@
   &--h2 {
     line-height: 1.8;
     font-size: v.$font-size-h2;
+    text-wrap: balance;
+    position: relative;
 
     @include m.r-tablet {
       font-size: v.$font-size-h3;
@@ -37,6 +41,16 @@
 
     @include m.r-tablet {
       text-align: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      left: 0;
+      background:  var(--gold-color-light);
+     
     }
   }
 

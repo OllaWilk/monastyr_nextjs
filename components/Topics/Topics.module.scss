@@ -2,90 +2,33 @@
 @use "@/styles/variables.scss" as v;
 
 .topics {
-  padding-bottom: 80px;
+  padding: 112px 0 120px 0;
+  background-color: var(--background-color-light);
 
-  .wraper {
+  .grid,
+  h2 {
     @include m.container;
-    h2 {
-      padding: 0 0 20px;
-    }
+  }
+
+  h2 {
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: flex-start;
   }
 }
 
 .grid {
-  margin-top: 20px;
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "card1 card2 card3 "
-    "card4 card5 card6";
-
-  .card--1 {
-    grid-area: card1;
-  }
-
-  .card--2 {
-    grid-area: card2;
-  }
-
-  .card--3 {
-    grid-area: card3;
-  }
-
-  .card--4 {
-    grid-area: card4;
-  }
-
-    .card--5 {
-    grid-area: card5;
-  }
-
-    .card--6 {
-    grid-area: card6;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 
   @include m.r-tablet {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  @include m.r-mobile {
+    gap: 2.5rem;
+    margin-top: 0;
   }
 }
-
-// .gridBottom {
-//   display: grid;
-//   gap: 20px;
-//   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-//   margin-top: 20px;
-
-//   @include m.r-tablet {
-//     @include m.flex(column, stretch, center);
-//   }
-
-//   .card--5 {
-//     @include m.flex(column, flex-start, space-between);
-
-//     div {
-//       height: 80px;
-//       order: 0;
-
-//       @include m.r-tablet {
-//         height: 170px;
-//         order: 0;
-//       }
-//     }
-//   }
-
-//   .card--6 {
-//     @include m.flex(column, flex-start, space-between);
-
-//     div {
-//       height: 80px;
-//       order: 0;
-
-//       @include m.r-tablet {
-//         height: 170px;
-//         order: 0;
-//       }
-//     }
-//   }
-// }

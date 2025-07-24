@@ -26,5 +26,5 @@ export interface TopicCard {
   title: string;
   description: string;
   href: string;
-  img?: imageType;
+  img: imageType;
 }

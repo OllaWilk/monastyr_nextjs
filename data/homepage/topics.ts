@@ -7,7 +7,7 @@ export const topicsData: TopicCard[] = [
       "Poznaj naszą wspólnotę – ludzi, których łączy pragnienie bycia blisko Boga i drugiego człowieka.",
     href: "/onas",
     img: {
-      src: "/homepage/wspólnota.png",
+      src: "/homepage/wspólnota_mal.png",
       alt: "Portret linorytowy wspólnoty",
     },
   },
@@ -17,7 +17,7 @@ export const topicsData: TopicCard[] = [
       "Duchowość oparta na miłosierdziu i modlitwie – odkryj, co nas prowadzi.",
     href: "/duchowosc",
     img: {
-      src: "/homepage/duchowosc.png",
+      src: "/homepage/duchowosc_mal.png",
       alt: "Portret linorytowy z krzyżem i sercem",
     },
   },
@@ -27,7 +27,7 @@ export const topicsData: TopicCard[] = [
       "Każda wspólnota ma swoją opowieść. Oto nasza droga – od pierwszego spotkania do dziś.",
     href: "/historia",
     img: {
-      src: "/homepage/historia.png",
+      src: "/homepage/historia_mal.png",
       alt: "Linoryt drzewa i drogiy",
     },
   },
@@ -37,7 +37,7 @@ export const topicsData: TopicCard[] = [
       "Nasze działanie płynie z potrzeby serca. Przeczytaj, co dla nas znaczy służyć.",
     href: "/charyzmat",
     img: {
-      src: "/homepage/charyzmat.png",
+      src: "/homepage/charyzmat_mal.png",
       alt: "Haryzmat linoryt serce na dłoni",
     },
   },
@@ -47,7 +47,7 @@ export const topicsData: TopicCard[] = [
       "Zebraliśmy odpowiedzi na najczęstsze pytania – może Twoje też tam jest?",
     href: "/pytania",
     img: {
-      src: "/homepage/faq.png",
+      src: "/homepage/faq_mal.png",
       alt: "Haryzmat linoryt serce na dłoni",
     },
   },
@@ -57,7 +57,7 @@ export const topicsData: TopicCard[] = [
       "Chętnie Cię poznamy. Napisz, nawiąż kontakt, polub Nas lub zostaw łapkę w góre.",
     href: "/kontakt",
            img: {
-      src: "/homepage/kontakt.png",
+      src: "/homepage/kontakt_mal.png",
       alt: "Kontakt linoryt kciuk w górę",
     },
   },
