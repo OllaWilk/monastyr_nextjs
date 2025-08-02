@@ -7,6 +7,7 @@ interface Props {
   height?: number;
   imgClassName?: string;
   link?: boolean;
+  text?:boolean
 }
 
 export const Logo = ({
@@ -14,6 +15,7 @@ export const Logo = ({
   height = 56,
   imgClassName = "",
   link = true,
+  text = false
 }: Props) =>
   link ? (
     <Link href="/" className={imgClassName}>
@@ -24,6 +26,7 @@ export const Logo = ({
         height={height}
         priority
       />
+      {text && <p>Monastyr <br/> Świętego Krzysztofa</p>}
     </Link>
   ) : (
     <Image
@@ -33,4 +36,5 @@ export const Logo = ({
       height={height}
       priority
     />
+
   );
