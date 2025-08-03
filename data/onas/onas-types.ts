@@ -3,9 +3,9 @@ import { imageType } from "../general-types";
 
 export interface HeaderData {
   title: string;
-  subtitle: string;
-  buttonLabel: string;
-  buttonLink: string;
+  subtitle?: string;
+  buttonLabel?: string;
+  buttonLink?: string;
   image: imageType;
 }
 

@@ -1,0 +1,71 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.header {
+   height: calc(90svh - 80px); 
+  @include m.container;
+  @include m.flex(row, center,center);
+
+  .wrapper {
+    @include m.flex;
+    gap: 3rem;
+
+    @include m.r-mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .text {
+      flex: 1;
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+
+    .subtitle {
+      font-size: v.$font-size-body;
+      color: var(--grey-color);
+      margin: 1rem 0 2rem 0;
+      line-height: 150%;
+      width: 100%;
+
+      .lineSeparator {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 2px;
+        background-color: #999;
+        margin: 0 8px;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .ctaButton {
+      top: 0;
+    }
+  }
+}
+
+.image {
+  position: relative;
+  flex: 1;
+  min-height: 380px;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: var( --box-shadow);
+  overflow: hidden;
+
+  @include m.r-mobile {
+    width: 100%;
+    min-height: 240px;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
+}

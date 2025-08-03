@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   @include m.flex;
+  
 
   @include m.r-tablet {
     text-align: center;
