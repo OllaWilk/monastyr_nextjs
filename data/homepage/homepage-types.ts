@@ -1,7 +1,4 @@
-export interface imageType {
-  src: string;
-  alt: string;
-}
+import { imageType } from "../general-types";
 
 export interface HeaderData {
   title: string;

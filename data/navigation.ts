@@ -1,4 +1,4 @@
-import { NavigationTypes } from "./general-types.ts";
+import { NavigationTypes } from "./general-types.js";
 
 export const navigationData: NavigationTypes[] = [
     {
