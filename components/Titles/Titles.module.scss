@@ -6,6 +6,9 @@
   color: var(--gold-color-light);
   text-align: left;
   text-wrap: balance;
+    word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 
   &--h1 {
     text-transform: uppercase;

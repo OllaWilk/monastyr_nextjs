@@ -30,9 +30,10 @@ export const Menu = ({ isOpen }: Props) => (
       <li className={styles.navigationLinks}>
         <Link href="/kontakt">Kontakt</Link>
       </li>
-      <li className={styles.navigationLinks}>
+      {/* TO DO: move it to separate component and make it position fixed */}
+      {/* <li className={styles.navigationLinks}>
         <Button>Intencje</Button>
-      </li>
+      </li> */}
     </ul>
   </div>
 );

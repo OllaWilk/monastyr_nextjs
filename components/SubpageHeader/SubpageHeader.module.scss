@@ -2,24 +2,51 @@
 @use "@/styles/mixins.scss" as m;
 
 .header {
-   height: calc(90svh - 80px); 
+  height: calc(90svh - 80px);
   @include m.container;
-  @include m.flex(row, center,center);
+  @include m.flex(row, center, center);
+
+  @include m.r-small-laptop {
+    height: auto;
+    min-height: 80vh;
+  }
+
+  @include m.r-tablet {
+    min-height: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
+  }
 
   .wrapper {
     @include m.flex;
     gap: 3rem;
 
-    @include m.r-mobile {
+    @include m.r-tablet {
       flex-direction: column;
-      text-align: center;
+      padding-top: 1rem;
+      gap: 1rem;
     }
 
     .text {
       flex: 1;
 
+      @include m.r-tablet {
+        @include m.flex(column, center, center);
+      }
+
       h1 {
         font-size: 42px;
+
+        @include m.r-tablet {
+          text-align: center;
+          font-size: 2.8rem;
+        }
+
+        @include m.r-mobile {
+          font-size: clamp(1.7rem, 6vw, 2.4rem);
+          width: 80vw;
+        }
       }
     }
 
@@ -29,6 +56,10 @@
       margin: 1rem 0 2rem 0;
       line-height: 150%;
       width: 100%;
+
+      @include m.r-tablet {
+        text-align: center;
+      }
 
       .lineSeparator {
         display: inline-block;
@@ -56,12 +87,20 @@
   min-height: 380px;
   max-width: 500px;
   border-radius: var(--border-radius);
-  box-shadow: var( --box-shadow);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
+
+  
+  @include m.r-tablet {
+    width: 100%;
+    min-height: 300px;
+    max-width: 500px;
+  }
 
   @include m.r-mobile {
     width: 100%;
-    min-height: 240px;
+    min-height: 300px;
+    max-width: 100%;
   }
 
   img {

@@ -1,7 +1,7 @@
 import {  HeaderData } from "./onas-types";
 
 export const headerData: HeaderData = {
-  title: 'Wspólnota jedności serc chrześcijańskich',
+  title: 'Wspólnota jedności serc <wbr /> chrześcijańskich',
   subtitle: 'Zjednoczeni modlitwą i miłością',
   
   image: {
