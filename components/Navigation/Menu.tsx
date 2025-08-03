@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import clsx from "clsx";
-import { Button } from "../Buttons/Button";
 
 import styles from "./Navigation.module.scss";
 
