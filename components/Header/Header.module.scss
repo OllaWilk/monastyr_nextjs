@@ -2,10 +2,11 @@
 @use "@/styles/mixins.scss" as m;
 
 .splash {
-  height: calc(90svh - 80px); // Adjusting for the height of the navbar;
+  min-height: calc(90svh - 80px); // Adjusting for the height of the navbar;
   position: relative;
   overflow: hidden;
   @include m.flex;
+  padding: 4rem 0;
   
 
   @include m.r-tablet {

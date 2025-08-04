@@ -14,7 +14,7 @@ export interface IntroData {
   title: string;
   content: string[];
   subtitle?: string;
-  image?: {
+  image: {
     src: string;
     alt: string;
   };

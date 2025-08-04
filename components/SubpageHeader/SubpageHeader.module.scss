@@ -21,6 +21,8 @@
   .wrapper {
     @include m.flex;
     gap: 3rem;
+    margin: 0 0;
+    padding: 0;
 
     @include m.r-tablet {
       flex-direction: column;
@@ -44,7 +46,7 @@
         }
 
         @include m.r-mobile {
-          font-size: clamp(1.7rem, 6vw, 2.4rem);
+          font-size: clamp(2rem, 6vw, 2.4rem);
           width: 80vw;
         }
       }
@@ -90,7 +92,6 @@
   box-shadow: var(--box-shadow);
   overflow: hidden;
 
-  
   @include m.r-tablet {
     width: 100%;
     min-height: 300px;

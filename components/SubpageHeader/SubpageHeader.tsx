@@ -13,7 +13,7 @@ export const SubpageHeader = ({ data }: Props) => {
   const { title, subtitle, buttonLabel, buttonLink, image } = data;
 
   return (
-    <section className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles.text}>
           <Titles title={title} as="h1" />
@@ -30,6 +30,6 @@ export const SubpageHeader = ({ data }: Props) => {
           <Image src={image.src} alt={image.alt} fill priority />
         </div>
       </div>
-    </section>
+    </header>
   );
 };

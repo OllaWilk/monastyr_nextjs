@@ -1,0 +1,47 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.card {
+  min-height: 200px;
+  @include m.flex(row, center, space-between);
+  box-shadow: var(--shadow);
+  background-color: var(--background-color-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+
+  @include m.r-tablet {
+    flex-direction: column;
+  }
+
+  h2 {
+    border-bottom: 2px solid var(--gold-color);
+    margin-bottom: 1.7rem;
+  }
+
+  .image {
+    max-width: 500px;
+    width: 500px;
+    height: 430px;
+    min-height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 20% 20%;
+    }
+  }
+
+  .content {
+    flex: 1;
+    margin: 2rem 4rem;
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+
+    @include m.r-tablet {
+      flex-direction: column;
+    }
+  }
+}
