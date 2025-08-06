@@ -14,8 +14,8 @@
   @include m.r-tablet {
     min-height: auto;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
     align-items: flex-start;
+    padding: 60px 0;
   }
 
   .wrapper {
@@ -61,19 +61,6 @@
 
       @include m.r-tablet {
         text-align: center;
-      }
-
-      .lineSeparator {
-        display: inline-block;
-        vertical-align: middle;
-        width: 30px;
-        height: 2px;
-        background-color: #999;
-        margin: 0 8px;
-
-        @media (max-width: 768px) {
-          display: none;
-        }
       }
     }
 

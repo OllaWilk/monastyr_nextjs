@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HeaderData } from "@/data/onas/onas-types";
 import { Titles } from "../Titles/Titles";
 import { Button } from "../Buttons/Button";
+import { LineSeparator } from "../LineSeparator/LineSeparator";
 import styles from "./SubpageHeader.module.scss";
 
 interface Props {
@@ -18,7 +19,7 @@ export const SubpageHeader = ({ data }: Props) => {
         <div className={styles.text}>
           <Titles title={title} as="h1" />
           <p className={styles.subtitle}>
-            {subtitle} <span className={styles.lineSeparator}></span>
+            {subtitle} <LineSeparator />
           </p>
          {buttonLink && 
            <Button className={styles.ctaButton}>

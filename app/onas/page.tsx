@@ -7,11 +7,12 @@ export default function ONas() {
   return (
     <>
       <SubpageHeader data={headerData} />
-      <main className="container wraper-grid">
+      <main className="container">
           {aboutData.map((card, index) => (
             <Card
               key={card.id}
               title={card.title}
+              subtitle={card.subtitle || ''}
               paragraph={card.content}
               img={card.image}
               reverse={index % 2 === 1}

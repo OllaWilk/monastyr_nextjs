@@ -16,8 +16,10 @@ body {
   font-size: v.$font-size-body;
   line-height: v.$line-height-base;
   background-color: var(--background-color);
-  color: var(--light-color);
+  color: var(--grey-color);
   letter-spacing: var(--letter-spacing-text);
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .container {
@@ -29,8 +31,6 @@ section {
   background-color: var(--background-color);
   padding: 40px 0;
 }
-
-
 
 a {
   text-decoration: none;
@@ -48,9 +48,3 @@ li {
   list-style-type: none;
 }
 
-.wraper-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  padding: 3rem 0;
-}

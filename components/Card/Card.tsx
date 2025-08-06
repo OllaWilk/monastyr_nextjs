@@ -1,26 +1,38 @@
+import Image from "next/image";
 import { Titles } from "../Titles/Titles";
+import { Subtitles } from "../Subtitles/Subtitles";
 import { Paragraph } from "../Paragraph/Paragraph";
 import styles from "./Card.module.scss";
 
 interface Props {
   img: { alt: string; src: string };
   title: string;
+  subtitle: string;
   paragraph: string[];
   reverse: boolean;
 }
 
-export const Card = ({ img, title, paragraph, reverse = false }: Props) => {
+export const Card = ({
+  img,
+  title,
+  subtitle,
+  paragraph,
+  reverse = false,
+}: Props) => {
   return (
     <div className={`${styles.card} ${reverse ? styles.reverse : ""}`}>
       <div className={styles.image}>
-        <img src={img.src} alt={img.alt}  />
+        <Image src={img.src} alt={img.alt} width={400} height={500} />
       </div>
-      <div className={styles.content}>
-        <Titles as="h2" title={title} />
+      <article className={styles.content}>
+        <div className={styles.headerWrap}>
+          <Titles as="h2" title={title} />
+          <Subtitles title={subtitle} />
+        </div>
         {paragraph.map((el, i) => (
           <Paragraph text={el} key={i} />
         ))}
-      </div>
+      </article>
     </div>
   );
 };

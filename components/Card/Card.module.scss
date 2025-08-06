@@ -2,46 +2,97 @@
 @use "@/styles/mixins.scss" as m;
 
 .card {
-  min-height: 200px;
-  @include m.flex(row, center, space-between);
-  box-shadow: var(--shadow);
-  background-color: var(--background-color-light);
-  border-radius: var(--border-radius);
   overflow: hidden;
+  margin-bottom: 6.5rem;
+  @include m.flex(row, center, space-between);
+  position: relative;
+  gap: 2rem;
 
-  @include m.r-tablet {
-    flex-direction: column;
+  @include m.respond-max(990px) {
+    text-align: center;
   }
 
-  h2 {
-    border-bottom: 2px solid var(--gold-color);
-    margin-bottom: 1.7rem;
+  @include m.r-tablet {
+    flex-direction: column-reverse;
+    padding: 60px 0;
   }
 
   .image {
-    max-width: 500px;
-    width: 500px;
-    height: 430px;
-    min-height: 250px;
+    width: 400px;
+    height: 400px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--black-color);
+
+         @include m.r-tablet {
+       width: 100%;
+       height: 250px;
+
+     
+    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: 20% 20%;
+
+       @include m.r-tablet {
+       object-position: 40% 40%;
+
+     
+    }
+
     }
   }
 
   .content {
-    flex: 1;
-    margin: 2rem 4rem;
+    @include m.flex(column, center, space-around);
+    width: 50%;
+    min-height: 400px;
+    padding: 0 0 0 1rem;
+
+    @include m.r-tablet {
+       width: 100%;
+    }
   }
 
   &.reverse {
     flex-direction: row-reverse;
+    padding: 0 1rem 0 0rem;
 
     @include m.r-tablet {
-      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .headerWrap {
+    width: 100%;
+
+    h2 {
+      border-bottom: 2px solid var(--gold-color-light);
+      width: 100%;
+
+      @include m.respond-max(990px) {
+        text-align: center;
+      }
+
+          @include m.r-tablet {
+        text-align: left;
+
+     
+    }
+    }
+
+    p {
+      width: 100%;
+
+      @include m.respond-max(990px) {
+        text-align: center;
+      }
+
+   
     }
   }
 }
