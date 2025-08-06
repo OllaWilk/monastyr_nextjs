@@ -1,6 +1,6 @@
-import { HeaderData } from "./onas-types";
+import { Subheader } from "../general-types";
 
-export const headerData: HeaderData = {
+export const headerData: Subheader = {
   title: "Wspólnota jedności serc <wbr /> chrześcijańskich",
   subtitle: "Zjednoczeni modlitwą i miłością",
 

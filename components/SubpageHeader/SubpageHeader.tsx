@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HeaderData } from "@/data/onas/onas-types";
 import { Titles } from "../Titles/Titles";
 import { Button } from "../Buttons/Button";
 import { LineSeparator } from "../LineSeparator/LineSeparator";
 import styles from "./SubpageHeader.module.scss";
+import { Subheader } from "@/data/general-types";
 
 interface Props {
-  data: HeaderData;
+  data: Subheader;
 }
 
 export const SubpageHeader = ({ data }: Props) => {
-  const { title, subtitle, buttonLabel, buttonLink, image } = data;
+  const { title, content, subtitle, buttonLabel, buttonLink, image } = data;
 
   return (
     <header className={styles.header}>
@@ -21,6 +21,7 @@ export const SubpageHeader = ({ data }: Props) => {
           <p className={styles.subtitle}>
             {subtitle} <LineSeparator />
           </p>
+          <p>{content}</p>
          {buttonLink && 
            <Button className={styles.ctaButton}>
             <Link href={buttonLink}>{buttonLabel}</Link>

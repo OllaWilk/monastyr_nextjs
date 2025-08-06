@@ -1,14 +1,13 @@
-import Image from "next/image";
+import { SubpageHeader } from "@/components/SubpageHeader/SubpageHeader";
+import { headerData } from "@/data/duchowosc/header";
 
-export default function Duchowosc() {
+export default function ONas() {
   return (
-    <Image
-      src="/under construction.png"
-      alt="strona w budowie"
-      width={350}
-      height={500}
-      priority
-      className="container"
-    />
+    <>
+      <SubpageHeader data={headerData} />
+      <main className="container">
+         
+      </main>
+    </>
   );
 }
