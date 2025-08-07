@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Titles } from "@/components/Titles/Titles";
 import { Paragraph } from "@/components/Paragraph/Paragraph";
 import styles from "./UnityIconSection.module.scss";
 
