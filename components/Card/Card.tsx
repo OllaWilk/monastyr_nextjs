@@ -5,7 +5,7 @@ import { Paragraph } from "../Paragraph/Paragraph";
 import styles from "./Card.module.scss";
 
 interface Props {
-  img: { alt: string; src: string; width: number; height: number };
+  img: { alt: string; src: string; width?: number; height?: number };
   title: string;
   subtitle: string;
   paragraph: string[];
