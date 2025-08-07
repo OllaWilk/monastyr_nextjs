@@ -7,8 +7,5 @@ export interface IntroData {
   title: string;
   content: string[];
   subtitle?: string;
-  image: {
-    src: string;
-    alt: string;
-  };
+  image: imageType;
 }

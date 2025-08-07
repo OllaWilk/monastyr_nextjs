@@ -2,7 +2,8 @@
 @use "@/styles/mixins.scss" as m;
 
 .header {
-  height: calc(90svh - 80px);
+  height: auto;
+  min-height: calc(90svh - 80px);
   @include m.container;
   @include m.flex(row, center, center);
 
@@ -48,6 +49,13 @@
         @include m.r-mobile {
           font-size: clamp(2rem, 6vw, 2.4rem);
           width: 80vw;
+        }
+      }
+
+      .paragraph {
+        @include m.r-tablet {
+          padding: 0px 20px 20px 20px;
+          text-align: center;
         }
       }
     }

@@ -6,7 +6,7 @@ export const aboutData: IntroData[] = [
     title: "Co to w ogóle jest monastyr ?",
     subtitle: "Słyszysz te słowa i myślisz: „Że co?” - trudno się dziwić.",
     content: [
-      "Osoby prawosławne czy grekokatolickie skojarzą to słowo </br> z czymś, co w Kościele rzymskokatolickim nazywa się „klasztorem”. Ale nazwa ma przykuwać uwagę - choć nie do końca opisuje to, czym naprawdę jesteśmy.",
+      "Osoby prawosławne czy greckokatolickie skojarzą to słowo </br> z czymś, co w Kościele rzymskokatolickim nazywa się „klasztorem”. Ale nazwa ma przykuwać uwagę - choć nie do końca opisuje to, czym naprawdę jesteśmy.",
     ],
     image: {
       src: "/aboutpage/monastyr.jpg",
@@ -22,7 +22,7 @@ export const aboutData: IntroData[] = [
       "Co to znaczy? To znaczy, że gromadzimy w jedno dzieci Boże, które wierzą w Boga w Trójcy Świętej Jedynego. </br> Budujemy nie tylko wiarę, ale też więzi między sobą.",
     ],
     image: {
-      src: "/logo_transparent.png",
+      src: "/logo_black.png",
       alt: "Barokowy obraz symbolizujący wspólnotę",
     },
   },

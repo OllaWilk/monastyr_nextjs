@@ -1,0 +1,21 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.mercySection {
+  padding: 6rem 0;
+  @include m.flex(column, center, center);
+  text-align: center;
+
+  @include m.r-tablet {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  strong {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
