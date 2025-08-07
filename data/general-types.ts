@@ -17,5 +17,5 @@ export interface Subheader {
   content?: string[];
   buttonLabel?: string;
   buttonLink?: string;
-  image: imageType;
+  image: { src: string; alt: string };
 }
