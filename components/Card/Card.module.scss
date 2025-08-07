@@ -18,26 +18,16 @@
   }
 
   .image {
-    width: 400px;
-    height: 400px;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     overflow: hidden;
-    background-color: var(--black-color);
-
-    @include m.r-tablet {
-      width: 100%;
-      height: 250px;
-    }
 
     img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-      object-position: 20% 20%;
+      border-radius: var(--border-radius);
 
       @include m.r-tablet {
-        object-position: 40% 40%;
+        object-fit: contain;
       }
     }
   }
@@ -50,6 +40,7 @@
 
     @include m.r-tablet {
       width: 100%;
+      padding: 0 0 0 0rem;
     }
   }
 
@@ -59,6 +50,7 @@
 
     @include m.r-tablet {
       flex-direction: column-reverse;
+      padding: 0 0 0 0rem;
     }
   }
 

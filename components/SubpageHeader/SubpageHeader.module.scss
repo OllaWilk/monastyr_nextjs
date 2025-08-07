@@ -6,10 +6,12 @@
   min-height: calc(90svh - 80px);
   @include m.container;
   @include m.flex(row, center, center);
-
+  padding: 20px 0 0 0;
+  
   @include m.r-small-laptop {
     height: auto;
     min-height: 80vh;
+    
   }
 
   @include m.r-tablet {
@@ -91,6 +93,7 @@
     width: 100%;
     min-height: 300px;
     max-width: 500px;
+    margin-top: 20px;
   }
 
   @include m.r-mobile {

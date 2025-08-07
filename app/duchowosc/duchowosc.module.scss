@@ -7,7 +7,7 @@
   text-align: center;
 
   @include m.r-tablet {
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 
   h2 {
@@ -17,5 +17,23 @@
   strong {
     font-weight: normal;
     font-style: italic;
+  }
+}
+
+.historySection {
+  padding: 60px 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  @include m.r-mobile {
+    text-align: center;
+  }
+
+  .cardWrap {
+    padding: 60px 0 0 0;
+
+
   }
 }

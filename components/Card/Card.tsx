@@ -5,7 +5,7 @@ import { Paragraph } from "../Paragraph/Paragraph";
 import styles from "./Card.module.scss";
 
 interface Props {
-  img: { alt: string; src: string };
+  img: { alt: string; src: string; width: number; height: number };
   title: string;
   subtitle: string;
   paragraph: string[];
@@ -22,7 +22,7 @@ export const Card = ({
   return (
     <div className={`${styles.card} ${reverse ? styles.reverse : ""}`}>
       <div className={styles.image}>
-        <Image src={img.src} alt={img.alt} width={400} height={500} />
+        <Image src={img.src} alt={img.alt} width={img.width } height={img.height} />
       </div>
       <article className={styles.content}>
         <div className={styles.headerWrap}>

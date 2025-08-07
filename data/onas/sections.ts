@@ -11,6 +11,8 @@ export const aboutData: IntroData[] = [
     image: {
       src: "/aboutpage/monastyr.jpg",
       alt: "logo monastyru Świętego Krzysztofa",
+      width: 400,
+      height: 400,
     },
   },
   {
@@ -24,6 +26,8 @@ export const aboutData: IntroData[] = [
     image: {
       src: "/logo_black.png",
       alt: "Barokowy obraz symbolizujący wspólnotę",
+      width: 400,
+      height: 400,
     },
   },
   {
@@ -36,6 +40,8 @@ export const aboutData: IntroData[] = [
     image: {
       src: "/aboutpage/ekumenizm.jpg",
       alt: "Ilustracja ludzi z różnych tradycji chrześcijańskich",
+      width: 400,
+      height: 400,
     },
   },
   {
@@ -48,6 +54,8 @@ export const aboutData: IntroData[] = [
     image: {
       src: "/aboutpage/co-nas-laczy.jpg",
       alt: "Obraz symbolizujący jedność i wspólną modlitwę",
+      width: 400,
+      height: 400,
     },
   },
   {
@@ -60,8 +68,9 @@ export const aboutData: IntroData[] = [
     ],
     image: {
       src: "/aboutpage/co-nas-dzieli.jpg",
-
       alt: "Obraz przedstawiający dialog i różnorodność",
+      width: 400,
+      height: 400,
     },
   },
   {
@@ -74,6 +83,8 @@ export const aboutData: IntroData[] = [
     image: {
       src: "/aboutpage/czy-jestesmy-zakonem.jpg",
       alt: "Obraz symbolizujący niezależność od instytucji zakonnej",
+      width: 400,
+      height: 400,
     },
   },
 ];

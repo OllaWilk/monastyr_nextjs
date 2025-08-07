@@ -7,8 +7,9 @@ export interface NavigationTypes {
 export interface imageType {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 }
-
 
 export interface Subheader {
   title: string;
