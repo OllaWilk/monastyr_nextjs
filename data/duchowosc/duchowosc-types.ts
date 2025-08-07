@@ -1,4 +1,4 @@
-import { imageType } from "../general-types";
+import { Cards, imageType } from "../general-types";
 
 export interface IntroData {
   id: string;
@@ -8,7 +8,14 @@ export interface IntroData {
   image: imageType;
 }
 
-export interface MilosierdzieData {
+export interface MercyData {
   title: string;
   content: string[];
+}
+
+export interface HistoryData {
+  header: string;
+  subtitle: string;
+  cards: Cards[];
+  conclusion: string;
 }

@@ -19,3 +19,11 @@ export interface Subheader {
   buttonLink?: string;
   image: { src: string; alt: string };
 }
+
+export interface Cards {
+  id: string;
+  title: string;
+  content: string[];
+  subtitle?: string;
+  image: imageType;
+}

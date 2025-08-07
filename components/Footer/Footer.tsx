@@ -16,11 +16,12 @@ export const Footer = () => {
               <Link href="/onas">O nas</Link>
             </li>
             <li>
-              <Link href="/duchowosc">Duchowość</Link>
-            </li>
-            <li>
               <Link href="/charyzmat">Charyzmat</Link>
             </li>
+            <li>
+              <Link href="/duchowosc">Duchowość</Link>
+            </li>
+
             <li>
               <Link href="/historia">Historia</Link>
             </li>

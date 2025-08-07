@@ -2,12 +2,13 @@ import { Card } from "@/components/Card/Card";
 import { SubpageHeader } from "@/components/SubpageHeader/SubpageHeader";
 import { headerData } from "@/data/onas/header";
 import { aboutData } from "@/data/onas/sections";
+import styles from './oNas.module.scss';
 
 export default function ONas() {
   return (
-    <>
+    <div className={styles.page}>
       <SubpageHeader data={headerData} />
-      <main className="container">
+      <main className={styles.mainSection}>
           {aboutData.map((card, index) => (
             <Card
               key={card.id}
@@ -20,6 +21,6 @@ export default function ONas() {
           ))}
     
       </main>
-    </>
+    </div>
   );
 }

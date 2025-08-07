@@ -1,6 +1,6 @@
-import { IntroData } from "./onas-types";
+import { Cards } from "../general-types";
 
-export const aboutData: IntroData[] = [
+export const aboutData: Cards[] = [
   {
     id: "intro",
     title: "Co to w ogóle jest monastyr ?",

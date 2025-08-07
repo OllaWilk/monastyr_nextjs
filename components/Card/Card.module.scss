@@ -3,7 +3,6 @@
 
 .card {
   overflow: hidden;
-  margin-bottom: 6.5rem;
   @include m.flex(row, center, space-between);
   position: relative;
   gap: 2rem;
@@ -18,11 +17,16 @@
   }
 
   .image {
-    box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     overflow: hidden;
 
+    @include m.r-mobile{
+      max-width: 90vw;
+    }
+
     img {
+            max-width: 90vw;
+
       object-fit: cover;
       border-radius: var(--border-radius);
 

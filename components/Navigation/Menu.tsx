@@ -18,10 +18,10 @@ export const Menu = ({ isOpen }: Props) => (
         <Link href="/duchowosc">Duchowość</Link>
       </li>
       <li className={styles.navigationLinks}>
-        <Link href="/charyzmat">Charyzmat</Link>
+        <Link href="/historia">Historia</Link>
       </li>
       <li className={styles.navigationLinks}>
-        <Link href="/historia">Historia</Link>
+        <Link href="/charyzmat">Charyzmat</Link>
       </li>
       <li className={styles.navigationLinks}>
         <Link href="/pytania">Pytania</Link>

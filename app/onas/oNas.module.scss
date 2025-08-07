@@ -1,0 +1,11 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.page {
+    padding: 0 0 60px 0;
+}
+.mainSection {
+    @include m.container;
+    @include m.flex(column, center, space-between);
+    gap: 6.5rem;
+}

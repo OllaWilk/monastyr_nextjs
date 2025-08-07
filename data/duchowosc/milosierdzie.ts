@@ -1,6 +1,6 @@
-import { MilosierdzieData } from "./duchowosc-types";
+import { MercyData } from "./duchowosc-types";
 
-export const milosierdzieData: MilosierdzieData = {
+export const mercyData: MercyData = {
   title: "Miłosierdzie ponad sąd",
   content: [
     "W Monastyrze wierzymy w Boga, który wybiera miłosierdzie ponad sąd.  Tak, jak pisze List św. Jakuba:",
