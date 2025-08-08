@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className={`${montserrat.variable} ${cormorant.variable} `}>
         <Navigation />
-        <div >{children}</div>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

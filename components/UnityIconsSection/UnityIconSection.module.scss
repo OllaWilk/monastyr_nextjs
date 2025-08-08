@@ -1,29 +1,12 @@
 @use "@/styles/variables.scss" as v;
 @use "@/styles/mixins.scss" as m;
 
-.unitySection {
-  background-color: var(--background-color-dark);
-
-  .grid {
-    @include m.container();
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-
-    @include m.r-tablet {
-        display: flex;
-        flex-direction: column;
-    }
-  }
-
-  .item {
-    text-align: center;
-    padding: 2rem;
-    border: 1px solid var(--gold-color);
+.item {
+  text-align: center;
+  padding: 2rem;
+  
+  img {
     border-radius: var(--border-radius);
-
-    img {
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 1rem;
   }
 }

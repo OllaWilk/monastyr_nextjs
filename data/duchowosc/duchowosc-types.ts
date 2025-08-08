@@ -10,6 +10,8 @@ export interface IntroData {
 
 export interface MercyData {
   title: string;
+  quote: string;
+  span: string;
   content: string[];
 }
 
@@ -18,4 +20,14 @@ export interface HistoryData {
   subtitle: string;
   cards: Cards[];
   conclusion: string;
+}
+
+export interface MercyMeditationData {
+  title: string;
+  subtitle: string;
+  cards: {
+    title: string;
+    text: string;
+    img: imageType;
+  }[]
 }

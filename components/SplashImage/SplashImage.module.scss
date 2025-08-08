@@ -9,26 +9,23 @@
   overflow: hidden;
   opacity: 0.8;
 
+
+
   @include m.r-small-laptop {
     width: 120%;
     
     right: -10%;
     opacity: 0.8;
   }
-
   @include m.r-tablet {
-    width: 250%;
-    right: -100px;
-    top: -10px;
+    width: 200%;
     opacity: 0.6;
-    // object-fit: contain;
-        // object-position: top;
+  }
 
-        img {
-              object-position: 50% 20%;
-
-        }
-
+  @include m.r-mobile {
+    width: 350%;
+    right: -200px;
+    opacity: 0.6;
   }
 
   .imgage-desctop {

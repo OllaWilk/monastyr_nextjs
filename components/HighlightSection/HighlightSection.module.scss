@@ -1,0 +1,19 @@
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--gold-color);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-left: 2px solid var(--gold-color);
+  border-right: 2px solid var(--gold-color);
+  width: 80%;
+  line-height: 1.6;
+//   background-color: var(--background-color-light);
+
+  span {
+    font-size: 0.9rem;
+    color: #aaa;
+    display: block;
+    margin-top: 0.5rem;
+  }
+}

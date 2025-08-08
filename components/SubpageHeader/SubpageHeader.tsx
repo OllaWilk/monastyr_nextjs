@@ -22,9 +22,6 @@ export const SubpageHeader = ({ data }: Props) => {
           <p className={styles.subtitle}>
             {subtitle} <LineSeparator />
           </p>
-          {content?.map((p, index) => (
-            <p key={index} className={styles.paragraph}>{parse(p)}</p>
-          ))}
 
           {buttonLink && (
             <Button className={styles.ctaButton}>
@@ -35,6 +32,13 @@ export const SubpageHeader = ({ data }: Props) => {
         <div className={styles.image}>
           <Image src={image.src} alt={image.alt} fill priority />
         </div>
+      </div>
+      <div className={styles.contentWrap}>
+        {content?.map((p, index) => (
+          <p key={index} className={styles.paragraph}>
+            {parse(p)}
+          </p>
+        ))}
       </div>
     </header>
   );

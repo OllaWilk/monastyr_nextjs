@@ -3,22 +3,16 @@
 
 .header {
   height: auto;
-  min-height: calc(90svh - 80px);
   @include m.container;
-  @include m.flex(row, center, center);
-  padding: 20px 0 0 0;
-  
+
   @include m.r-small-laptop {
     height: auto;
-    min-height: 80vh;
-    
   }
 
   @include m.r-tablet {
     min-height: auto;
     height: auto;
     align-items: flex-start;
-    padding: 60px 0;
   }
 
   .wrapper {
@@ -26,10 +20,11 @@
     gap: 3rem;
     margin: 0 0;
     padding: 0;
+    padding: 2rem 0 2rem 0;
 
     @include m.r-tablet {
       flex-direction: column;
-      padding-top: 1rem;
+      padding: 2rem 0 0rem 0;
       gap: 1rem;
     }
 
@@ -50,14 +45,8 @@
 
         @include m.r-mobile {
           font-size: clamp(2rem, 6vw, 2.4rem);
-          width: 80vw;
-        }
-      }
-
-      .paragraph {
-        @include m.r-tablet {
-          padding: 0px 20px 20px 20px;
-          text-align: center;
+          width: 90vw;
+          padding: 2rem 0 0rem 0;
         }
       }
     }
@@ -77,6 +66,17 @@
     .ctaButton {
       top: 0;
     }
+  }
+}
+
+.contentWrap {
+  padding: 0 0 3rem 0;
+  text-align: justify;
+
+  @include m.r-tablet {
+      padding: 3rem 0;
+
+    text-align: center;
   }
 }
 

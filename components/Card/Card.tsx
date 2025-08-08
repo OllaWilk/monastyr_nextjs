@@ -21,9 +21,12 @@ export const Card = ({
 }: Props) => {
   return (
     <div className={`${styles.card} ${reverse ? styles.reverse : ""}`}>
-      <div className={styles.image}>
-        <Image src={img.src} alt={img.alt} width={img.width } height={img.height} />
-      </div>
+      <Image
+        src={img.src}
+        alt={img.alt}
+        width={img.width}
+        height={img.height}
+      />
       <article className={styles.content}>
         <div className={styles.headerWrap}>
           <Titles as="h2" title={title} />

@@ -2,10 +2,18 @@
 @use "@/styles/mixins.scss" as m;
 
 .page {
-    padding: 0 0 60px 0;
+  padding: 0 0 60px 0;
+
+  header{
+    padding: 0 0 20px 0;
+  }
 }
 .mainSection {
-    @include m.container;
-    @include m.flex(column, center, space-between);
-    gap: 6.5rem;
+  @include m.container;
+  @include m.flex(column, center, space-between);
+  gap: 4rem;
+
+  @include m.r-mobile {
+    gap: 0;
+  }
 }

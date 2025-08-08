@@ -21,7 +21,7 @@ export const historyData: HistoryData = {
     },
     {
       id: "Siostra Faustyna Kowalska",
-      title: "Maria Franciszka Kozłowska",
+      title: "Siostra Faustyna Kowalska",
       subtitle: "Apostołka Miłosierdzia Bożego w Kościele rzymskokatolickim.",
       content: [
         " zapisała słowa Jezusa, który prosił, aby ufać Jego Miłosierdziu i głosić je światu: ",

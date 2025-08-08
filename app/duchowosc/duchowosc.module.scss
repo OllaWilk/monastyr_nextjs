@@ -2,8 +2,7 @@
 @use "@/styles/mixins.scss" as m;
 
 .darkBackground {
-  padding: 6rem 0;
-  @include m.flex(column, center, center);
+  padding: 5rem 0;
   text-align: center;
   background-color: var(--background-color-dark);
 
@@ -11,24 +10,23 @@
     padding: 2rem 0;
   }
 
-  h2 {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
+  .highlightSection {
+    @include m.container;
 
-  strong {
-    font-weight: normal;
-    font-style: italic;
+    h2 {
+      text-align: center;
+    }
+
+    blockquote {
+      margin: 5rem auto;
+      background-color: var(--background-color-light);
+    }
   }
 }
 
 .historySection {
   padding: 60px 0;
   @include m.container;
-
-  h2 {
-    margin-bottom: 1rem;
-  }
 
   @include m.r-mobile {
     text-align: center;
@@ -40,3 +38,22 @@
     padding: 60px 0;
   }
 }
+
+.mercyMeditation {
+  @include m.container;
+  text-align: left;
+
+ 
+}
+
+ .grid {
+    margin: 5rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    @include m.r-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }

@@ -5,7 +5,8 @@
   overflow: hidden;
   @include m.flex(row, center, space-between);
   position: relative;
-  gap: 2rem;
+  gap: 3rem;
+  width: 100%;
 
   @include m.respond-max(990px) {
     text-align: center;
@@ -13,48 +14,34 @@
 
   @include m.r-tablet {
     flex-direction: column-reverse;
-    padding: 60px 0;
   }
 
-  .image {
+  img {
     border-radius: var(--border-radius);
-    overflow: hidden;
 
-    @include m.r-mobile{
-      max-width: 90vw;
-    }
-
-    img {
-            max-width: 90vw;
-
-      object-fit: cover;
-      border-radius: var(--border-radius);
-
-      @include m.r-tablet {
-        object-fit: contain;
-      }
+    @include m.r-tablet {
+      object-fit: contain;
     }
   }
 
   .content {
     @include m.flex(column, center, space-around);
+    height: 100%;
     width: 50%;
     min-height: 400px;
-    padding: 0 0 0 1rem;
+
 
     @include m.r-tablet {
       width: 100%;
-      padding: 0 0 0 0rem;
+      @include m.flex(column, center, center);
     }
   }
 
   &.reverse {
     flex-direction: row-reverse;
-    padding: 0 1rem 0 0rem;
 
     @include m.r-tablet {
       flex-direction: column-reverse;
-      padding: 0 0 0 0rem;
     }
   }
 
