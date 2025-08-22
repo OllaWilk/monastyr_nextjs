@@ -4,6 +4,7 @@
 .header {
   height: auto;
   @include m.container;
+  padding: 4rem 0;
 
   @include m.r-small-laptop {
     height: auto;
@@ -18,9 +19,6 @@
   .wrapper {
     @include m.flex;
     gap: 3rem;
-    margin: 0 0;
-    padding: 0;
-    padding: 2rem 0 2rem 0;
 
     @include m.r-tablet {
       flex-direction: column;
@@ -70,11 +68,11 @@
 }
 
 .contentWrap {
-  padding: 0 0 3rem 0;
+  margin-top: 4rem;
   text-align: justify;
 
   @include m.r-tablet {
-      padding: 3rem 0;
+    padding: 3rem 0;
 
     text-align: center;
   }

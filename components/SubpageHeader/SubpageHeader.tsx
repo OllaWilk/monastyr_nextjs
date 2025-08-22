@@ -33,6 +33,7 @@ export const SubpageHeader = ({ data }: Props) => {
           <Image src={image.src} alt={image.alt} fill priority />
         </div>
       </div>
+      {content && 
       <div className={styles.contentWrap}>
         {content?.map((p, index) => (
           <p key={index} className={styles.paragraph}>
@@ -40,6 +41,7 @@ export const SubpageHeader = ({ data }: Props) => {
           </p>
         ))}
       </div>
+      }
     </header>
   );
 };

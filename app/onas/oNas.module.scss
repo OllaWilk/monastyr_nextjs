@@ -3,10 +3,6 @@
 
 .page {
   padding: 0 0 60px 0;
-
-  header{
-    padding: 0 0 20px 0;
-  }
 }
 .mainSection {
   @include m.container;

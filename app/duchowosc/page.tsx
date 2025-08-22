@@ -7,8 +7,8 @@ import { HighlightSection } from "@/components/HighlightSection/HighlightSection
 import { Card } from "@/components/Card/Card";
 import { Titles } from "@/components/Titles/Titles";
 import { UnityIconsSection } from "@/components/UnityIconsSection/UnityIconSection";
-import styles from "./duchowosc.module.scss";
 import { mercyMeditation } from "@/data/duchowosc/mercyMeditation";
+import styles from "./duchowosc.module.scss";
 
 export default function Duchowosc() {
   return (
