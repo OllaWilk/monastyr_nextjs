@@ -7,9 +7,9 @@ export const mercyMeditation: MercyMeditationData = {
   cards: [
     {
       title: "Modlimy się w duchu różnych tradycji",
-      text: "– czasem jest to liturgia prawosławna, innym razem modlitwy rzymskokatolickie, protestanckie czy mariawickie.",
+      text: "czasem jest to liturgia prawosławna, innym razem modlitwy rzymskokatolickie, protestanckie czy mariawickie.",
       img: {
-        src: "/milosierdziepage/iconPrayer.png",
+        src: "/milosierdziepage/modlitwa.jpg",
         alt: "dwóch mężczyzn i kobieta zagłębieni w modlitwie",
         width: 250,
         height: 250,
@@ -17,9 +17,9 @@ export const mercyMeditation: MercyMeditationData = {
     },
     {
       title: "Słuchamy siebie nawzajem",
-      text: "– nie udajemy, że różnic nie ma, ale uczymy się miłości ponad nimi.",
+      text: "nie udajemy, że różnic nie ma, ale uczymy się miłości ponad nimi.",
       img: {
-        src: "/milosierdziepage/iconlistening.png",
+        src: "/milosierdziepage/sluchamy.jpg",
         alt: "dwóch mężczyzn i kobieta zagłębieni w rozmowie",
         width: 250,
         height: 250,
@@ -27,9 +27,9 @@ export const mercyMeditation: MercyMeditationData = {
     },
     {
       title: "Budujemy wspólnotę serc",
-      text: " – tak, by każdy mógł doświadczyć miłosiernej obecności Boga i drugiego człowieka.",
+      text: "tak, by każdy mógł doświadczyć miłosiernej obecności Boga i drugiego człowieka.",
       img: {
-        src: "/milosierdziepage/iconHart.png",
+        src: "/milosierdziepage/budujemy.jpg",
         alt: "dwóch mężczyzn i kobieta zagłębieni w rozmowie nad nimi serce",
         width: 250,
         height: 250,

@@ -25,11 +25,16 @@ body {
 .container {
   @include m.container;
   overflow: hidden;
+  
 }
 
 section {
   background-color: var(--background-color);
-  padding: 40px 0;
+  padding: 80px 0;
+
+  @include m.r-mobile {
+    padding: calc(90vw - 10px);
+  }
 }
 
 a {

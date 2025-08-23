@@ -4,14 +4,14 @@
 .header {
   height: auto;
   @include m.container;
-  padding: 4rem 0;
+  padding: 80px 0;
 
   @include m.r-small-laptop {
     height: auto;
   }
 
   @include m.r-tablet {
-    min-height: auto;
+    min-height: 80vh;
     height: auto;
     align-items: flex-start;
   }
@@ -22,8 +22,12 @@
 
     @include m.r-tablet {
       flex-direction: column;
-      padding: 2rem 0 0rem 0;
+      padding: 2rem 0 0 0;
       gap: 1rem;
+    }
+
+    @include m.r-mobile {
+      min-height: 80vh;
     }
 
     .text {
@@ -43,7 +47,6 @@
 
         @include m.r-mobile {
           font-size: clamp(2rem, 6vw, 2.4rem);
-          width: 90vw;
           padding: 2rem 0 0rem 0;
         }
       }
@@ -72,7 +75,7 @@
   text-align: justify;
 
   @include m.r-tablet {
-    padding: 3rem 0;
+    margin: 4rem 0;
 
     text-align: center;
   }

@@ -1,4 +1,5 @@
 import { headerData } from "@/data/duchowosc/header";
+import { mercyMeditation } from "@/data/duchowosc/mercyMeditation";
 import { mercyData } from "@/data/duchowosc/milosierdzie";
 import { historyData } from "@/data/duchowosc/hisory";
 import { Paragraph } from "@/components/Paragraph/Paragraph";
@@ -7,7 +8,8 @@ import { HighlightSection } from "@/components/HighlightSection/HighlightSection
 import { Card } from "@/components/Card/Card";
 import { Titles } from "@/components/Titles/Titles";
 import { UnityIconsSection } from "@/components/UnityIconsSection/UnityIconSection";
-import { mercyMeditation } from "@/data/duchowosc/mercyMeditation";
+import { miloscDroga } from "@/data/duchowosc/miloscdroga";
+import { wymiaryMilosci } from "@/data/duchowosc/wymiaryMilosci";
 import styles from "./duchowosc.module.scss";
 
 export default function Duchowosc() {
@@ -24,8 +26,10 @@ export default function Duchowosc() {
         </div>
       </section>
       <section className={styles.historySection}>
-        <Titles as="h2" title={historyData.header} />
-        <Paragraph text={historyData.subtitle} />
+        <div className={styles.titlesWrap}>
+          <Titles as="h2" title={historyData.header} />
+          <Paragraph text={historyData.subtitle} />
+        </div>
         <div className={styles.cardWrap}>
           {historyData.cards.map((card, index) => (
             <Card
@@ -59,46 +63,29 @@ export default function Duchowosc() {
           </div>
         </div>
       </section>
-      <section className="container">
-        <Titles as="h2" title=" Miłość jako droga " />
-        <Paragraph
-          text={
-            "Miłosierdzie Boże nie jest tylko „pocieszeniem” – jest wezwaniem do przemiany. Ewangelia mówi jasno:"
-          }
-        />
-        <HighlightSection
-          text={
-            "„Będziesz miłował Pana, Boga swego… a bliźniego swego jak siebie samego” "
-          }
-          span={"(Mk 12,30-31)"}
-        />
+      <section className={`${styles.pathHighlihgt} container`}>
+        <Titles as="h2" title={miloscDroga.title} />
+        <Paragraph text={miloscDroga.subtitle} />
+        <HighlightSection text={miloscDroga.quote} span={miloscDroga.span} />
       </section>
-      <section className="container">
-        <Titles
-          as="h2"
-          title=" W naszej duchowości szczególnie akcentujemy trzy wymiary miłości:"
-        />
-        <div className={styles.grid}>
-          <h3>
-            1. Miłość do Boga – poprzez modlitwę, adorację, lekturę Słowa Bożego
-            i sakramenty (tam, gdzie są dostępne).
-          </h3>
-          <h3>
-            2. Miłość wzajemną – troska o braci i siostry, gotowość do
-            przebaczenia, życie prostotą i otwartością.
-          </h3>
-          <h3>
-            3. Miłość do świata – widzimy w nim nie wroga, ale pole misyjne.
-          </h3>
+      <section className={styles.darkBackground}>
+        <div className="container">
+          <Titles as="h2" title={wymiaryMilosci.title} />
+          <div className={styles.grid}>
+            {wymiaryMilosci.cards.map((card) => (
+              <UnityIconsSection
+                key={card.text}
+                alt={card.img.alt}
+                src={card.img.src}
+                width={card.img.width || 250}
+                height={card.img.height || 250}
+                title={card.title}
+                text={card.text}
+              />
+            ))}
+          </div>
+          <p className={styles.text}>{wymiaryMilosci.paragraph} </p>
         </div>
-        <Paragraph
-          text="    Chcemy nieść światu nadzieję, pokój i świadectwo
-          miłosierdzia. Duchowość braci i sióstr Każda osoba, która jest w
-          Monastyrze, jest wezwana do rozwoju własnego życia duchowego zgodnie
-          ze swoim sumieniem oraz normami Kościoła, do którego należy. Chcemy,
-          by każdy i każda z nas tworzył wspólnotę chrześcijan na tyle, na ile
-          to w danej sytuacji jest możliwe."
-        />
       </section>
     </div>
   );

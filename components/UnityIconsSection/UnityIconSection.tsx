@@ -24,7 +24,7 @@ export const UnityIconsSection = ({
       <div className={styles.image}>
         <Image src={src} alt={alt} width={width} height={height} />
       </div>
-      <h3> {title}</h3>
+      <h3 className={styles.title}> {title}</h3>
       <Paragraph text={text} />
     </div>
   );

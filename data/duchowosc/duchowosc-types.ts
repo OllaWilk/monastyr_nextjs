@@ -31,3 +31,21 @@ export interface MercyMeditationData {
     img: imageType;
   }[]
 }
+
+export interface MercyPathData {
+  title: string;
+  subtitle: string;
+  quote: string;
+  span: string;
+}
+
+
+export interface WymiaryMilosciData {
+  title: string;
+  paragraph: string;
+  cards: {
+    title: string;
+    text: string;
+    img: imageType;
+  }[]
+}

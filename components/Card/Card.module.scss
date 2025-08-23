@@ -5,8 +5,9 @@
   overflow: hidden;
   @include m.flex(row, center, space-between);
   position: relative;
-  gap: 3rem;
+  gap: 4rem;
   width: 100%;
+  padding: 4rem 0;
 
   @include m.respond-max(990px) {
     text-align: center;
@@ -14,13 +15,18 @@
 
   @include m.r-tablet {
     flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
   }
 
   img {
     border-radius: var(--border-radius);
+    width: auto;
 
     @include m.r-tablet {
       object-fit: contain;
+      width: 100%;
     }
   }
 
@@ -30,11 +36,13 @@
     width: 50%;
     min-height: 400px;
 
-
     @include m.r-tablet {
       width: 100%;
+      min-height: 60vh;
       @include m.flex(column, center, center);
     }
+
+
   }
 
   &.reverse {
@@ -47,6 +55,8 @@
 
   .headerWrap {
     width: 100%;
+
+   
 
     h2 {
       border-bottom: 2px solid var(--gold-color-light);
