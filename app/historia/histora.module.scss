@@ -1,0 +1,309 @@
+// @use "@/styles/variables.scss" as v;
+// @use "@/styles/mixins.scss" as m;
+
+// .timelineSection {
+//   position: relative;
+//   @include m.container;
+// }
+
+// .timelineTrack {
+//   position: relative;
+//   padding: 4rem 0;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 3px;
+//     height: 100%;
+//     background: var(--gold-color-light);
+//   }
+// }
+
+// .timelineItem {
+//   @include m.flex(column, center, center);
+// }
+
+// .marker {
+//   margin: 0;
+//   background-color: var(--gold-color-light);
+//   border-radius: 8px;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+//   z-index: 9;
+
+//   h3 {
+
+//     font-size: 1.5rem;
+//     color: var(--background-color);
+//     padding: 0 1.5rem 0.5rem 1.5rem;
+//   }
+// }
+
+// .card {
+//   background-color: var(--background-color-light);
+//   border-radius: 8px;
+//   padding: 1.5rem;
+//   width: 66.66%;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   z-index: 2;
+//   margin: 3rem 0rem;
+//   gap: 1.5rem;
+//   overflow: hidden;
+// }
+
+// .textContent {
+//   text-align: center;
+//   @include m.flex(column, center, center);
+//   gap: 2rem;
+
+//   h3 {
+//     // color: #1a1a1a;
+//     font-size: 1.25rem;
+//     margin-bottom: 0.75rem;
+//   }
+
+//   p {
+//     font-size: 1rem;
+//     // color: #444;
+//   }
+// }
+
+// /* Responsive design */
+// @media (max-width: 768px) {
+//   .timelineTrack::before {
+//     left: 20px;
+//   }
+
+//   .timelineItem {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     padding-left: 40px;
+
+//     .card {
+//       width: 100%;
+//       margin: 0;
+//     }
+
+//     .marker {
+//       left: 20px;
+//       transform: translateX(0);
+//       text-align: left;
+//     }
+//   }
+
+//   .textContent {
+//     h3 {
+//       font-size: 1.1rem;
+//     }
+
+//     p {
+//       font-size: 0.95rem;
+//     }
+//   }
+
+//   .images {
+//     justify-content: flex-start;
+//   }
+// }
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.historia {
+  /* opcjonalnie – lekki pattern w tle */
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(255,255,255,0.02), transparent 60%),
+    radial-gradient(1200px 600px at 110% 10%, rgba(255,255,255,0.03), transparent 60%);
+}
+
+.timelineSection {
+  position: relative;
+  padding-block: clamp(2rem, 4vw, 4rem);
+  @include m.container;
+}
+
+.timelineTrack {
+  position: relative;
+  /* pionowa linia – subtelny gradient */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 214, 143, 0) 0%,
+      var(--gold-color-light) 10%,
+      var(--gold-color-light) 90%,
+      rgba(255, 214, 143, 0) 100%
+    );
+    opacity: .9;
+    pointer-events: none;
+  }
+}
+
+/* --- elementy --- */
+
+.timelineItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr minmax(3px, 3px) 1fr;
+  align-items: start;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding-block: clamp(1.25rem, 2.5vw, 2.75rem);
+  /* odstęp między punktami */
+}
+
+.timelineItem.left { /* karta po lewej */
+  .card     { grid-column: 1 / 2; justify-self: end; }
+  .spine    { grid-column: 2 / 3; }
+  .marker   { grid-column: 3 / 4; justify-self: start; }
+}
+.timelineItem.right { /* karta po prawej */
+  .card     { grid-column: 3 / 4; justify-self: start; }
+  .spine    { grid-column: 2 / 3; }
+  .marker   { grid-column: 1 / 2; justify-self: end; }
+}
+
+/* łącznik od linii do karty */
+.card {
+  position: relative;
+  background: color-mix(in oklab, var(--background-color-light), white 4%);
+  border: 1px solid color-mix(in oklab, var(--gold-color-light), transparent 85%);
+  border-radius: 14px;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+  width: min(640px, 96%);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition:
+    transform .35s cubic-bezier(.2,.7,.2,1),
+    box-shadow .35s cubic-bezier(.2,.7,.2,1),
+    border-color .35s ease;
+
+  /* „ogon” do linii */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    width: 22px; height: 2px;
+    background: var(--gold-color-light);
+    opacity: .8;
+  }
+
+  .textContent {
+    text-align: left;
+    @include m.flex(column, flex-start, flex-start);
+    gap: .85rem;
+
+    h3 {
+      font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+      letter-spacing: .3px;
+    }
+    p {
+      font-size: clamp(.95rem, 1.1vw, 1rem);
+      line-height: 1.7;
+      opacity: .92;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.32);
+    }
+  }
+}
+
+/* kierunek ogona */
+.timelineItem.left  .card::after { right: -22px; }
+.timelineItem.right .card::after { left:  -22px; }
+
+/* znacznik z datą – „pill”, lekko sticky */
+.marker {
+  position: sticky;
+  top: 6rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  background: var(--gold-color-light);
+  color: var(--background-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  white-space: nowrap;
+
+  /* kropka pulsująca */
+  &::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .9;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+  }
+
+  h3 {
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    padding: 0;
+    color: var(--background-color);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1);    opacity: .9; }
+  50%      { transform: scale(1.35); opacity: .5; }
+}
+
+/* punkty „spine” (miejsce przecięcia z linią) – kropka ze złotą obwódką */
+.spine {
+  position: relative;
+  width: 3px; /* zgodnie z linią */
+  justify-self: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.05rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--background-color);
+    border: 3px solid var(--gold-color-light);
+    box-shadow: 0 0 0 4px rgba(255, 214, 143, .12);
+  }
+}
+
+/* --- mobile / tablet --- */
+@media (max-width: 900px) {
+  .timelineTrack::before { left: 28px; transform: none; }
+
+  .timelineItem,
+  .timelineItem.left,
+  .timelineItem.right {
+    grid-template-columns: 28px 1fr;
+    gap: 1rem;
+  }
+
+  .spine  { grid-column: 1 / 2; }
+  .marker { grid-column: 2 / 3; justify-self: start; top: 4.5rem; }
+  .card   { grid-column: 2 / 3; width: 100%; }
+
+  .card::after { /* ogon do lewej */
+    left: -18px; right: auto;
+    width: 18px;
+  }
+}
+
+/* dodatkowe: wysokie DPI / bardzo duże ekrany */
+@media (min-width: 1400px) {
+  .card { width: min(720px, 96%); }
+}

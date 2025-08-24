@@ -21,19 +21,19 @@ export const Footer = () => {
             <li>
               <Link href="/historia">Historia</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/charyzmat">Charyzmat</Link>
             </li>
 
             <li>
               <Link href="/pytania">Pytania</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/kontakt">Kontakt</Link>
             </li>
-            <li>
+            {/* <li>
               <a href="/prywatność">Prywatność</a>
-            </li>
+            </li> */}
           </ul>
           <address className={styles.socials} aria-label="Social media links">
             <ul className={styles.socialList}>

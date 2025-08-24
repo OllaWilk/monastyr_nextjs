@@ -31,26 +31,26 @@ export const topicsData: TopicCard[] = [
       alt: "Linoryt drzewa i drogiy",
     },
   },
-  {
-    title: "charyzmat",
-    description:
-      "Nasze działanie płynie z potrzeby serca. Przeczytaj, co dla nas znaczy służyć.",
-    href: "/charyzmat",
-    img: {
-      src: "/homepage/charyzmat.jpg",
-      alt: "Haryzmat linoryt serce na dłoni",
-    },
-  },
-  {
-    title: "FAQ",
-    description:
-      "Zebraliśmy odpowiedzi na najczęstsze pytania – może Twoje też tam jest?",
-    href: "/pytania",
-    img: {
-      src: "/homepage/faq.jpg",
-      alt: "Haryzmat linoryt serce na dłoni",
-    },
-  },
+  // {
+  //   title: "charyzmat",
+  //   description:
+  //     "Nasze działanie płynie z potrzeby serca. Przeczytaj, co dla nas znaczy służyć.",
+  //   href: "/charyzmat",
+  //   img: {
+  //     src: "/homepage/charyzmat.jpg",
+  //     alt: "Haryzmat linoryt serce na dłoni",
+  //   },
+  // },
+  // {
+  //   title: "FAQ",
+  //   description:
+  //     "Zebraliśmy odpowiedzi na najczęstsze pytania – może Twoje też tam jest?",
+  //   href: "/pytania",
+  //   img: {
+  //     src: "/homepage/faq.jpg",
+  //     alt: "Haryzmat linoryt serce na dłoni",
+  //   },
+  // },
   {
     title: "kontakt",
     description:

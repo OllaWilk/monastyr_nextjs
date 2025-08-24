@@ -12,6 +12,9 @@ export const Menu = ({ isOpen }: Props) => (
   <div id="menu" className={clsx(styles.menu, isOpen && styles.open)}>
     <ul>
       <li className={styles.navigationLinks}>
+        <Link href="/">Home</Link>
+      </li>
+      <li className={styles.navigationLinks}>
         <Link href="/onas">O nas</Link>
       </li>
       <li className={styles.navigationLinks}>
@@ -20,12 +23,12 @@ export const Menu = ({ isOpen }: Props) => (
       <li className={styles.navigationLinks}>
         <Link href="/historia">Historia</Link>
       </li>
-      <li className={styles.navigationLinks}>
+      {/* <li className={styles.navigationLinks}>
         <Link href="/charyzmat">Charyzmat</Link>
       </li>
       <li className={styles.navigationLinks}>
         <Link href="/pytania">Pytania</Link>
-      </li>
+      </li> */}
       <li className={styles.navigationLinks}>
         <Link href="/kontakt">Kontakt</Link>
       </li>
