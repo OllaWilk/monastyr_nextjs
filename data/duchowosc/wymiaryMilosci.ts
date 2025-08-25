@@ -19,7 +19,7 @@ export const wymiaryMilosci: WymiaryMilosciData = {
       title: "2. Miłość wzajemną",
       text: "troska o braci i siostry, gotowość do przebaczenia, życie prostotą i otwartością",
       img: {
-        src: "/milosierdziepage/miloscblizniego.jpg",
+        src: "/milosierdziepage/miloscblizniego.png",
         alt: "dwóch mężczyzn i kobieta zagłębieni w rozmowie",
         width: 250,
         height: 250,
@@ -29,7 +29,7 @@ export const wymiaryMilosci: WymiaryMilosciData = {
       title: "3. Miłość do świata",
       text: "widzimy w nim nie wroga, ale pole misyjne.",
       img: {
-        src: "/milosierdziepage/miloscdoswiata.jpg",
+        src: "/milosierdziepage/miloscdoswiata.png",
         alt: "dwóch mężczyzn i kobieta zagłębieni w rozmowie nad nimi serce",
         width: 250,
         height: 250,

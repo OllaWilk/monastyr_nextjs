@@ -4,9 +4,9 @@
 .card {
   position: relative;
   background: #131210;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   transition: transform 0.3s ease;
   height: 220px;
   @include m.flex(column, center, center);
@@ -42,6 +42,10 @@
   position: relative;
   width: 100%;
   height: 100%;
+
+  &::after {
+    @include m.vignette();
+  }
 
   @include m.r-mobile {
     height: 250px;

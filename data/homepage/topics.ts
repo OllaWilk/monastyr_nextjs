@@ -17,7 +17,7 @@ export const topicsData: TopicCard[] = [
       "Duchowość oparta na miłosierdziu i modlitwie – odkryj, co nas prowadzi.",
     href: "/duchowosc",
     img: {
-      src: "/homepage/duchowosc.jpg",
+      src: "/homepage/duchowosc.png",
       alt: "Portret linorytowy z krzyżem i sercem",
     },
   },

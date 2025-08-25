@@ -41,6 +41,7 @@
 
   .cardWrap {
     @include m.flex(column, center, space-between);
+      gap: clamp(2rem, 3vw, 2.5rem);
   }
 }
 

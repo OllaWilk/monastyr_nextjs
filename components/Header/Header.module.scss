@@ -35,7 +35,7 @@
     }
 
     @include m.r-mobile {
-      padding: 2rem;
+      padding: 1rem;
     }
 
     @include m.respond-max(355px) {

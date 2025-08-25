@@ -2,69 +2,97 @@
 @use "@/styles/mixins.scss" as m;
 
 .card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: clamp(1.25rem, 3.5vw, 3rem);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  border-radius: var(--border-radius);
+  background: var(--background-color-light);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
-  @include m.flex(row, center, space-between);
-  position: relative;
-  gap: 4rem;
   width: 100%;
-  padding: 4rem 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.32);
+    }
+  }
 
   @include m.respond-max(990px) {
-    text-align: center;
+    grid-template-columns: 1fr;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+
+    .imageWrap {
+      order: 0;
+    }
+    .content {
+      order: 1;
+    }
   }
 
-  @include m.r-tablet {
-    flex-direction: column-reverse;
-    padding: 0;
-    margin: 0;
-    gap: 1rem;
+  &.reverse {
+    grid-template-columns: 1fr 1.05fr;
+
+    .imageWrap {
+      order: 2;
+    }
+    .content {
+      order: 1;
+    }
+
+    @include m.respond-max(990px) {
+      grid-template-columns: 1fr;
+      gap: clamp(0.75rem, 2vw, 1.25rem);
+
+      .imageWrap {
+        order: 0;
+      }
+      .content {
+        order: 1;
+      }
+    }
   }
 
-  img {
+  .imageWrap {
+    aspect-ratio: 4 / 3;
+    width: 412;
+    height: 309;
+    overflow: hidden;
     border-radius: var(--border-radius);
-    width: auto;
 
-    @include m.r-tablet {
-      object-fit: contain;
+    img {
+      border-radius: var(--border-radius);
+      object-fit: cover;
+      display: block;
       width: 100%;
+    }
+
+    @include m.r-mobile {
+      width: 100%;
+      object-fit: cover;
     }
   }
 
   .content {
-    @include m.flex(column, center, space-around);
-    height: 100%;
-    width: 50%;
-    min-height: 400px;
+    @include m.flex(column, flex-start, center);
+    gap: clamp(0.75rem, 1.5vw, 1rem);
+    min-height: 340px;
 
     @include m.r-tablet {
-      width: 100%;
-      min-height: 60vh;
-      @include m.flex(column, center, center);
-    }
-
-
-  }
-
-  &.reverse {
-    flex-direction: row-reverse;
-
-    @include m.r-tablet {
-      flex-direction: column-reverse;
+      text-align: center;
     }
   }
 
   .headerWrap {
     width: 100%;
-
-   
+    padding-bottom: 0.35rem;
 
     h2 {
       border-bottom: 2px solid var(--gold-color-light);
-      width: 100%;
-
-      @include m.respond-max(990px) {
-        text-align: center;
-      }
+      padding-bottom: 0.4rem;
 
       @include m.r-tablet {
         text-align: left;
@@ -76,9 +104,8 @@
     }
 
     p {
-      width: 100%;
-
-      @include m.respond-max(990px) {
+      opacity: 0.9;
+      @include m.r-mobile {
         text-align: center;
       }
     }

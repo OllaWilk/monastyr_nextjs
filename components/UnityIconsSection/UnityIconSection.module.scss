@@ -5,10 +5,20 @@
   text-align: center;
   padding: 2rem;
 
+  @include m.r-mobile {
+    padding: 0;
+  }
+
   img {
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
     object-fit: cover;
+
+
+    @include m.r-mobile {
+      width: 100%;
+    }
+
   }
 
   .title {

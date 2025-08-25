@@ -6,11 +6,10 @@
 }
 
 .mainSection {
+  padding: 60px 0;
   @include m.container;
   @include m.flex(column, center, center);
-
-  
-  @include m.r-mobile {
-    gap: 0;
-  }
+  gap: clamp(2rem, 3vw, 2.5rem);
+  padding-block: clamp(1rem, 2vw, 1.5rem);
+  margin: 60px auto;
 }

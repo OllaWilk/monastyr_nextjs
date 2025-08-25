@@ -111,3 +111,22 @@
     @content;
   }
 }
+
+@mixin vignette(
+  $sizeX: 150%,
+  $sizeY: 100%,
+  $centerX: 50%,
+  $centerY: 50%,
+  $transparentStop: 55%,
+  $color: rgba(0, 0, 0, 0.5)
+) {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    #{$sizeX} #{$sizeY} at #{$centerX} #{$centerY},
+    transparent #{$transparentStop},
+    #{$color}
+  );
+  pointer-events: none;
+}

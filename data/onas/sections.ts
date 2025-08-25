@@ -9,10 +9,10 @@ export const aboutData: Cards[] = [
       "Osoby prawosławne czy greckokatolickie skojarzą to słowo </br> z czymś, co w Kościele rzymskokatolickim nazywa się „klasztorem”. Ale nazwa ma przykuwać uwagę - choć nie do końca opisuje to, czym naprawdę jesteśmy.",
     ],
     image: {
-      src: "/aboutpage/monastyr.jpg",
+      src: "/aboutpage/monastyr.png",
       alt: "logo monastyru Świętego Krzysztofa",
-      width: 400,
-      height: 400,
+      width: 412,
+      height: 309,
     },
   },
   {
@@ -24,10 +24,10 @@ export const aboutData: Cards[] = [
       "Co to znaczy? To znaczy, że gromadzimy w jedno dzieci Boże, które wierzą w Boga w Trójcy Świętej Jedynego. </br> Budujemy nie tylko wiarę, ale też więzi między sobą.",
     ],
     image: {
-      src: "/logo_black.png",
+      src: "/aboutpage/logo_black.png",
       alt: "Barokowy obraz symbolizujący wspólnotę",
-      width: 400,
-      height: 400,
+      width: 412,
+      height: 309,
     },
   },
   {
@@ -38,10 +38,10 @@ export const aboutData: Cards[] = [
       "Nieważne, czy jesteś w Kościele rzymskokatolickim, luterańskim, mariawickim, prawosławnym, czy jakimkolwiek innym. A może nie identyfikujesz się z żadnym Kościołem - jesteś tzw. NON-em? W Monastyrze jest dla Ciebie miejsce.",
     ],
     image: {
-      src: "/aboutpage/ekumenizm.jpg",
+      src: "/aboutpage/ekumenizm.png",
       alt: "Ilustracja ludzi z różnych tradycji chrześcijańskich",
-      width: 400,
-      height: 400,
+      width: 412,
+      height: 309,
     },
   },
   {
@@ -52,10 +52,10 @@ export const aboutData: Cards[] = [
       "Łączy nas modlitwa - codziennie o 20:00 spotykamy się duchowo, niezależnie od tego, gdzie jesteśmy na świecie. Łączy nas także pragnienie budowania jedności ponad podziałami.",
     ],
     image: {
-      src: "/aboutpage/co-nas-laczy.jpg",
+      src: "/aboutpage/co-nas-laczy.png",
       alt: "Obraz symbolizujący jedność i wspólną modlitwę",
-      width: 400,
-      height: 400,
+      width: 412,
+      height: 309,
     },
   },
   {
@@ -67,10 +67,10 @@ export const aboutData: Cards[] = [
       "My staramy się iść sobie naprzeciw tak, jak potrafimy. Szanujemy nawzajem swoje przekonania - dlatego np. podczas wspólnych modlitw korzystamy z różnych tradycji. Jeśli coś komuś przeszkadza - omawiamy to i szukamy rozwiązań: możemy pominąć fragment, przeredagować go albo pozwolić, by tę część odmówiła inna osoba.",
     ],
     image: {
-      src: "/aboutpage/co-nas-dzieli.jpg",
+      src: "/aboutpage/co-nas-dzieli.png",
       alt: "Obraz przedstawiający dialog i różnorodność",
-      width: 400,
-      height: 400,
+      width: 412,
+      height: 309,
     },
   },
   {
@@ -81,10 +81,10 @@ export const aboutData: Cards[] = [
       "Jesteśmy wspólnotą - monastyrem jedności serc chrześcijańskich.",
     ],
     image: {
-      src: "/aboutpage/czy-jestesmy-zakonem.jpg",
+      src: "/aboutpage/czy-jestesmy-zakonem.png",
       alt: "Obraz symbolizujący niezależność od instytucji zakonnej",
-      width: 400,
-      height: 400,
+      width: 412,
+      height: 309,
     },
   },
 ];

@@ -16,7 +16,6 @@ export default function Duchowosc() {
   return (
     <div className={styles.ducowosc}>
       <SubpageHeader data={headerData} />
-
       <section className={styles.darkBackground}>
         <div className={styles.highlightSection}>
           <Titles as="h2" title={mercyData.title} />
