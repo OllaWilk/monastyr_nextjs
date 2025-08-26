@@ -13,31 +13,18 @@ export const IntentionForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
-
-      <input
-        type="text"
-        name="website"
-     
-    
-    
-      />
+      <input type="text" name="website" />
 
       <label htmlFor="intention" className={styles.label}>
         Treść intencji
       </label>
       <textarea
         id="intention"
-  
         placeholder="Napisz swoją intencję…"
         value={intention}
-   
-
-    
       />
 
-      <button type="submit">
-        "Wyślij intencję"
-      </button>
+      <button type="submit">"Wyślij intencję"</button>
     </form>
   );
 };
