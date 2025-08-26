@@ -13,11 +13,6 @@ import { IntentionForm } from "@/components/IntentionForm/IntentionForm";
 export default function Kontakt() {
   const { form } = kontaktData;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted");
-
-  };
 
   return (
     <div className={styles.page}>
