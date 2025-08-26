@@ -8,7 +8,8 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
   transition: transform 0.3s ease;
-  height: 220px;
+  // height: 220px;
+  height: 280px;
   @include m.flex(column, center, center);
 
   &:hover {
