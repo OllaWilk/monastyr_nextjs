@@ -8,7 +8,6 @@ export default function Historia() {
   return (
     <div className={styles.historia}>
       <SubpageHeader data={headerData} />
-
       <section
         className={styles.timelineSection}
         aria-label="Historia Monastyru"
