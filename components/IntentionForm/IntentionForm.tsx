@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./IntentionForm.module.scss";
 
 export const IntentionForm = () => {
   const [intention, setIntention] = useState("");
@@ -12,10 +11,10 @@ export const IntentionForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form} noValidate>
+    <form onSubmit={handleSubmit}  noValidate>
       <input type="text" name="website" />
 
-      <label htmlFor="intention" className={styles.label}>
+      <label htmlFor="intention" >
         Treść intencji
       </label>
       <textarea
