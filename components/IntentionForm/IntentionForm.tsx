@@ -17,10 +17,9 @@ export const IntentionForm = () => {
       <input
         type="text"
         name="website"
-        tabIndex={-1}
-        autoComplete="off"
-        className={styles.honeypot}
-        aria-hidden="true"
+     
+    
+    
       />
 
       <label htmlFor="intention" className={styles.label}>
@@ -28,15 +27,15 @@ export const IntentionForm = () => {
       </label>
       <textarea
         id="intention"
-        className={styles.textarea}
+  
         placeholder="Napisz swoją intencję…"
         value={intention}
-        onChange={(e) => setIntention(e.target.value)}
-        rows={7}
-        required
+   
+
+    
       />
 
-      <button type="submit" className={styles.button}>
+      <button type="submit">
         "Wyślij intencję"
       </button>
     </form>
