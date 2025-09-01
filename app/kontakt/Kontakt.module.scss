@@ -3,48 +3,46 @@
 
 .page {
   padding-bottom: clamp(2rem, 4vw, 4rem);
-}
 
-.wrapper {
-  @include m.container;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: start;
+  .wrapper {
+    @include m.container;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: start;
 
-  @include m.r-small-laptop {
-    grid-template-columns: 1fr;
+    @include m.r-small-laptop {
+      grid-template-columns: 1fr;
+    }
+
+    @include m.r-tablet {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
-  @include m.r-tablet {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-.card {
-  background: var(--background-color-light);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  padding: clamp(1rem, 3vw, 1.75rem);
-}
-
-.aside {
+  .card {
     background: var(--background-color-light);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  padding: clamp(1rem, 3vw, 1.75rem);
-
-  h3 {
-    margin-top: 0;
-    color: var(--gold-color-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: clamp(1rem, 3vw, 1.75rem);
   }
 
-  p {
-    margin-top: 0.25rem;
-    opacity: 0.9;
+  .aside {
+    background: var(--background-color-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: clamp(1rem, 3vw, 1.75rem);
+
+    h3 {
+      margin-top: 0;
+      color: var(--gold-color-light);
+    }
+
+    p {
+      margin-top: 0.25rem;
+      opacity: 0.9;
+    }
   }
 }
-
-
