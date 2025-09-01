@@ -1,0 +1,29 @@
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
+
+.page {
+  padding-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.wrapper {
+  @include m.container;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+
+  @include m.r-small-laptop {
+    grid-template-columns: 1fr;
+  }
+
+  .card, .aside {
+    background-color: var(--background-color-light);
+    border-radius: var(--border-radius);
+    padding: clamp(1rem, 3vw, 1.75rem);
+    box-shadow: var(--box-shadow);
+    z-index: 2;
+
+    gap: 1.5rem;
+    overflow: hidden;
+  }
+}
