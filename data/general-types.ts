@@ -27,3 +27,5 @@ export interface Cards {
   subtitle?: string;
   image: imageType;
 }
+
+export type Status = "idle" | "sending" | "sent" | "error";
