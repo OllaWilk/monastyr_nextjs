@@ -8,7 +8,7 @@
 .wrapper {
   @include m.container;
   display: grid;
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: 1.2fr 0.9fr;
   gap: clamp(1rem, 3vw, 2rem);
   align-items: start;
 
@@ -16,13 +16,14 @@
     grid-template-columns: 1fr;
   }
 
-  .card, .aside {
+  .card,
+  .aside {
     background-color: var(--background-color-light);
     border-radius: var(--border-radius);
     padding: clamp(1rem, 3vw, 1.75rem);
     box-shadow: var(--box-shadow);
     z-index: 2;
-
+    width: 100%;
     gap: 1.5rem;
     overflow: hidden;
   }

@@ -5,6 +5,7 @@ import { Paragraph } from "@/components/Paragraph/Paragraph";
 import { Titles } from "@/components/Titles/Titles";
 import { kontaktData } from "@/data/kontakt/kontakt";
 import styles from "./kontakt.module.scss";
+import { IntentionForm } from "@/components/IntentionForm/IntentionForm";
 export default function Kontakt() {
   const { form } = kontaktData;
 
@@ -18,12 +19,18 @@ export default function Kontakt() {
         <div className={styles.card}>
           <Titles as="h2" title={form.title} />
           <Paragraph text={form.description} />
+          <IntentionForm />
         </div>
 
         <aside className={styles.aside}>
-          <h3>Dołącz do nas w social media</h3>
-          <p>Sprawdź aktualności, zdjęcia i krótkie rozważania.</p>
+          <Titles as="h2" title={"Dołącz do nas w social media"} />
+          <Paragraph
+            text={"Sprawdź aktualności, zdjęcia i krótkie rozważania."}
+          />
         </aside>
+        <div>
+          <Titles as="h2" title={"Galeria"} />
+        </div>
       </section>
     </div>
   );
