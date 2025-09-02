@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./IntentionForm.module.scss";
 import { Status } from "@/data/general-types";
+import styles from "./IntentionForm.module.scss";
 
 export const IntentionForm = () => {
   const [intention, setIntention] = useState("");
@@ -41,7 +41,6 @@ export const IntentionForm = () => {
   return (
     <div className={styles.IntentionForm}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="intention">Twoja intencja</label>
         <textarea
           id="intention"
           name="intention"
