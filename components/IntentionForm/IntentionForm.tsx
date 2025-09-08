@@ -40,7 +40,7 @@ export const IntentionForm = () => {
 
   return (
     <div className={styles.IntentionForm}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}> 
         <textarea
           id="intention"
           name="intention"

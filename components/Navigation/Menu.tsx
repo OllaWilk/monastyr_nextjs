@@ -6,11 +6,12 @@ import styles from "./Navigation.module.scss";
 
 interface Props {
   isOpen: boolean;
+  closeMenu: () => void
 }
 
-export const Menu = ({ isOpen }: Props) => (
+export const Menu = ({ isOpen, closeMenu }: Props) =>  (
   <div id="menu" className={clsx(styles.menu, isOpen && styles.open)}>
-    <ul>
+    <ul onClick={closeMenu}>
       <li className={styles.navigationLinks}>
         <Link href="/">Home</Link>
       </li>

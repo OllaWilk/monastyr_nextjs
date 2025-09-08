@@ -9,10 +9,12 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
+  console.log(isOpen)
+  
   return (
     <nav className={styles.navigation}>
       <Logo imgClassName={styles.logoLink} />
-      <Menu isOpen={isOpen} />
+      <Menu isOpen={isOpen}  closeMenu={toggleMenu} />
       <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
     </nav>
   );

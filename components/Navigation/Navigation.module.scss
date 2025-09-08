@@ -16,8 +16,6 @@
     padding: 20px 10px;
   }
 
-
-
   .logoLink {
     height: 100%;
     display: flex;
@@ -43,20 +41,18 @@
       position: absolute;
       justify-content: flex-start;
       left: 0;
-      top: 80px;
-      bottom: 0;
-      height: 100vh;
+      max-height: 0vh;
       padding: v.$space-md;
       z-index: 10;
       width: 100%;
       overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      transition: max-height 0.4s ease, opacity 0.4s ease;
+
       pointer-events: none;
       flex-direction: column;
 
       &.open {
+        transition: max-height 0.4s ease, opacity 0.2s ease;
+        min-height: 100vh;
         max-height: 100vh;
         background: var(--background-color);
         opacity: 1;
@@ -64,6 +60,8 @@
         top: 0;
         padding-top: 80px;
       }
+
+
     }
   }
 
