@@ -3,7 +3,7 @@ import { KontaktData } from "./kontakt-types";
 export const kontaktData: KontaktData = {
   form: {
     title: "Wyślij intencję",
-    description: "Napisz kilka słów. Zaniesiemy Twoją intencję w modlitwie.",
+    description: "Napisz kilka słów. Zaniesiemy Twoją intencję w modlitwie. Pamiętaj, intencje nie są publikowane. Służą wyłącznie modlitwie i trafiają bezpośrednio na naszą skrzynkę. ",
   },
   socials: {
     title: "Znajdź nas w social media",

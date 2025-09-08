@@ -12,6 +12,10 @@
   gap: clamp(1rem, 3vw, 2rem);
   align-items: start;
 
+  @include m.r-tablet {
+    padding: 1rem 0;
+  }
+
   @include m.r-small-laptop {
     grid-template-columns: 1fr;
   }
@@ -26,9 +30,40 @@
     width: 100%;
     gap: 1.5rem;
     overflow: hidden;
+    height: 100%;
+    text-align: center;
 
-    @include m.r-tablet {
+    h2 {
       text-align: center;
+    }
+
+    @include m.r-small-laptop {
+      text-align: center;
+    }
+  }
+
+  .aside {
+    @include m.flex(column, center, flex-start);
+
+    .socials {
+      padding: 2rem 0 0 0;
+
+      .socialList {
+        @include m.flex(row, flex-start, flex-start);
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        a:hover {
+          color: var(--light-color);
+          rotate: -18deg;
+        }
+
+        @include m.r-tablet {
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+      }
     }
   }
 }

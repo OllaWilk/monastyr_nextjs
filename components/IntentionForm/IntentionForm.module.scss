@@ -8,23 +8,39 @@
     width: 100%;
   }
 
-  textarea {
-    resize: vertical;
-    min-height: 120px;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #444;
-    border-radius: 8px;
-    background: #2b2b2b;
-    color: #f5f5f5;
-    transition: border 0.2s, box-shadow 0.2s;
-    width: 100%;
+  .metaRow {
     margin: 2rem 0;
 
-    &:focus {
-      outline: none;
-      border-color: #4caf50; 
-      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+    textarea {
+      resize: vertical;
+      min-height: 160px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background: #2b2b2b;
+      color: var(--light-color);
+      transition: border 0.2s, box-shadow 0.2s;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+        border-color: var(--gold-color-light);
+        box-shadow: var(--box-shadow);
+      }
+    }
+
+    .info {
+      @include m.flex(column, center, center);
+      gap: 1rem;
+
+      small {
+        width: 100%;
+        text-align: center;
+      }
+      .errorMsg {
+        color: var(--danger-color-light);
+      }
     }
   }
 
@@ -39,6 +55,11 @@
     color: #fff;
     cursor: pointer;
     transition: background 0.3s, transform 0.1s;
+    width: 70%;
+
+    @include m.r-mobile {
+      width: 100%;
+    }
 
     &:hover:not(:disabled) {
       background: #43a047;
