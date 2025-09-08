@@ -8,13 +8,12 @@ import styles from "./Navigation.module.scss";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prev) => !prev);
+  const closeMenu = () => setIsOpen(false);
 
-  console.log(isOpen)
-  
   return (
     <nav className={styles.navigation}>
       <Logo imgClassName={styles.logoLink} />
-      <Menu isOpen={isOpen}  closeMenu={toggleMenu} />
+      <Menu isOpen={isOpen} closeMenu={closeMenu} />
       <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
     </nav>
   );

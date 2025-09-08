@@ -26,5 +26,9 @@
     width: 100%;
     gap: 1.5rem;
     overflow: hidden;
+
+    @include m.r-tablet {
+      text-align: center;
+    }
   }
 }

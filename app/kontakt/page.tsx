@@ -4,8 +4,9 @@ import { headerData } from "@/data/kontakt/header";
 import { Paragraph } from "@/components/Paragraph/Paragraph";
 import { Titles } from "@/components/Titles/Titles";
 import { kontaktData } from "@/data/kontakt/kontakt";
-import styles from "./kontakt.module.scss";
 import { IntentionForm } from "@/components/IntentionForm/IntentionForm";
+import styles from "./kontakt.module.scss";
+
 export default function Kontakt() {
   const { form } = kontaktData;
 

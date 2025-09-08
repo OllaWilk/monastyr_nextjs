@@ -1,16 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Status } from "@/data/general-types";
 import styles from "./IntentionForm.module.scss";
+
+const MIN_LEN = 10;
+const MAX_LEN = 500;
+const URL_OR_EMAIL = /(https?:\/\/|www\.|[\w.-]+@[\w.-]+\.\w{2,})/i;
 
 export const IntentionForm = () => {
   const [intention, setIntention] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [touched, setTouched] = useState(false);
+
+  const trimmed = useMemo(
+    () => intention.replace(/\s+/g, " ").trim(),
+    [intention]
+  );
+
+  const error = useMemo(() => {
+    if (!touched) return "";
+    if (!trimmed) return "Wpisz treść intencji.";
+    if (trimmed.length < MIN_LEN) return `Minimalna ilość znaków ${MIN_LEN}.`;
+    if (trimmed.length > MAX_LEN) return `Maksymalna ilość znaków ${MAX_LEN}.`;
+    if (URL_OR_EMAIL.test(trimmed))
+      return "Nie podawaj linków ani adresów e-mail.";
+    return "";
+  }, [trimmed, touched]);
+
+  const isValid =
+    !error && trimmed.length >= MIN_LEN && trimmed.length <= MAX_LEN;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!intention.trim()) return;
+    setTouched(true);
+    if (!isValid) return;
 
     setStatus("sending");
 
@@ -28,9 +52,9 @@ export const IntentionForm = () => {
         console.log("FD:", key, value);
       }
 
-
       setStatus("sent");
       setIntention("");
+      setTouched(false);
     } catch (err) {
       setStatus("error");
       console.error("Error submitting intention:", err);
@@ -38,9 +62,11 @@ export const IntentionForm = () => {
     }
   };
 
+  const charsLeft = Math.max(0, MAX_LEN - intention.length);
+
   return (
     <div className={styles.IntentionForm}>
-      <form onSubmit={handleSubmit}> 
+      <form onSubmit={handleSubmit}>
         <textarea
           id="intention"
           name="intention"
@@ -48,8 +74,28 @@ export const IntentionForm = () => {
           value={intention}
           onChange={(e) => setIntention(e.target.value)}
           placeholder="Wpisz intencję…"
+          onBlur={() => setTouched(true)}
+          aria-invalid={!!error}
+          aria-describedby="intention-help intention-error"
+          maxLength={MAX_LEN + 50}
           required
+          className={error ? styles.textareaError : undefined}
         />
+        <div className={styles.metaRow}>
+          <small id="inteniton-help">
+            Minimum {MIN_LEN} znaków, maksymalna {MAX_LEN}. Pozostało:{" "}
+            {charsLeft}.
+          </small>
+          {error && (
+            <small
+              id="intention-error"
+              role="alert"
+              className={styles.errorMsg}
+            >
+              {error}
+            </small>
+          )}
+        </div>
         <button type="submit" disabled={status === "sending"}>
           {status === "sending" ? "Wysyłanie…" : "Wyślij"}
         </button>

@@ -1,17 +1,11 @@
-.IntentionForm {
+@use "@/styles/variables.scss" as v;
+@use "@/styles/mixins.scss" as m;
 
+.IntentionForm {
   form {
-    display: flex;
-    flex-direction: column;
+    @include m.flex(column, center, center);
     gap: 1rem;
     width: 100%;
-  }
-
-  label {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: #ddd;
   }
 
   textarea {
