@@ -32,3 +32,12 @@ The website is deployed on a **paid hosting server**, not on free hosting platfo
 - **Automation:** Google Apps Script for email sending  
 
 ---
+
+## 🔮 Future improvements
+
+- Blog / News section
+- Better accessibility improvements
+
+
+---
+
