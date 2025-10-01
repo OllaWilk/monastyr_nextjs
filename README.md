@@ -6,7 +6,7 @@ The website is deployed on a **paid hosting server**, not on free hosting platfo
 
 ➡️ Live: https://wspolnotakrzysztofa.pl
 
-[![Live](public\homepageview.png)](https://wspolnotakrzysztofa.pl)
+[![Live](public/homepageview.png)](https://wspolnotakrzysztofa.pl)
 
 
 ---
