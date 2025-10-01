@@ -1,72 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Monastyr Website
 
-## Getting Started
+Official website for the Monastery community.  
+The project was built with **Next.js**, with focus on simple navigation, responsive design and accessibility.  
+The website is deployed on a **paid hosting server**, not on free hosting platforms.  
 
-First, run the development server:
+➡️ Live: https://wspolnotakrzysztofa.pl
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![Live](public\homepageview.png)](https://wspolnotakrzysztofa.pl)
 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-### 📝 Commit Conventions
+## 🌟 Features
 
-This project uses semantic commit message prefixes inspired by [Conventional Commits](https://www.conventionalcommits.org/). Below are some common examples:
+- Home page with sections: **About us**, **Spirituality**, **History**, **Contact**  
+- Easy navigation with a clear menu  
+- Social media icons and contact links  
+- Google Script for sending **prayer intentions** directly to a Gmail address  
+- Clean, minimalistic design connected to the spiritual theme  
+- Fully responsive for mobile and desktop  
 
-| Prefix     | When to use                             | Example commit message                             |
-|------------|------------------------------------------|-----------------------------------------------------|
-| `fix`      | Fixing a bug or UI issue                 | `fix: align and resize hamburger menu`              |
-| `style`    | Visual changes without logic changes     | `style: update hamburger spacing and alignment`     |
-| `refactor` | Code cleanup without changing behaviour  | `refactor: simplify hamburger layout styles`        |
-| `chore`    | Minor updates not related to features    | `chore: tidy up navigation padding`                 |
+---
 
-> These conventions help keep the commit history clear and consistent.
+## 🛠 Tech Stack
 
+- **Framework:** Next.js (React)  
+- **Styling:** SCSS / CSS Modules  
+- **Images:** Optimized WebP / modern formats  
+- **SEO & Accessibility:** semantic HTML, alt tags, meta tags  
+- **Deployment:** Paid hosting server (manual deployment)  
+- **Automation:** Google Apps Script for email sending  
 
-```
-my-next-app/
-│
-├── app/
-│   ├── layout.tsx               # Main layout with globals.scss import
-│   ├── page.tsx                 # Home Page (/)
-│   ├── about/
-│   │   └── page.tsx             # Subpage /about
-│   └── contact/
-│       └── page.tsx             # Subpage /contact
-│
-├── components/
-│   ├── Header/
-│   │   ├── Header.tsx
-│   │   └── Header.module.scss
-│   ├── Footer/
-│   │   ├── Footer.tsx
-│   │   └── Footer.module.scss
-│   └── SomeButton/
-│       ├── SomeButton.tsx
-│       └── SomeButton.module.scss
-│
-├── styles/
-│   ├── globals.scss             # Global styles + reset + theme
-│   ├── variables.scss           # Colors, fonts, spacing etc.
-│   └── mixins.scss              # Media queries, helper functions
-│
-├── public/
-│   └── logo.png                 # Only own assets
-│
-├── .gitignore
-├── next.config.js
-├── tsconfig.json
-├── package.json
-├── package-lock.json
-└── README.md
-```
+---
