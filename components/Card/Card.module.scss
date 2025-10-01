@@ -68,11 +68,13 @@
       object-fit: cover;
       display: block;
       width: 100%;
+      height: auto;
     }
 
     @include m.r-mobile {
       width: 100%;
       object-fit: cover;
+      height: auto
     }
   }
 

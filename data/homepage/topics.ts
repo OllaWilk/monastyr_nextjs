@@ -8,7 +8,7 @@ export const topicsData: TopicCard[] = [
     href: "/onas",
     img: {
       src: "/homepage/onas.jpg",
-      alt: "Portret linorytowy wspólnoty",
+      alt: "Grupowe zdjęcie monastyru. O nas. Dwie siostry i dwóch braci w habicie.",
     },
   },
   {
@@ -18,7 +18,7 @@ export const topicsData: TopicCard[] = [
     href: "/duchowosc",
     img: {
       src: "/homepage/duchowosc.png",
-      alt: "Portret linorytowy z krzyżem i sercem",
+      alt: "Duchowość monastyru. Otwarta biblia przy świecy.",
     },
   },
   {
@@ -27,8 +27,8 @@ export const topicsData: TopicCard[] = [
       "Każda wspólnota ma swoją opowieść. Oto nasza droga – od pierwszego spotkania do dziś.",
     href: "/historia",
     img: {
-      src: "/homepage/historia.jpg",
-      alt: "Linoryt drzewa i drogiy",
+      src: "/homepage/historia.png",
+      alt: "święty Krzysztof z dzieciątkiem Jezus. Historia monastyru.",
     },
   },
   // {
